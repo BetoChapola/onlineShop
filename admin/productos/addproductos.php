@@ -11,14 +11,11 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
     $registros=mysqli_query($link,"SELECT nombre from productos WHERE nombre='$nombre'");
 
     if (mysqli_num_rows($registros)==0){
-        mysqli_query($link,"insert into productos (nombre, precio, descripcion, id_categoria) VALUES ('$nombre','$precio','$descripcion','$idcategoria')");
-        cerrarconexion();
-        echo "exito";
 
         //Subida de imagenes
         if ($_FILES['imagen1']['size']!== 0){
 
-            $ext = explode (",",$_FILES['imagen1']['name']);
+            $ext = explode (".",$_FILES['imagen1']['name']);
             $extension = end($ext);
             $_FILES ['imagen1']['name'] = $nombre."_01.".$extension;
 
@@ -30,9 +27,19 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
 
                 $ruta = "imagenes/".$_FILES['imagen1']['name'];
                 $resultado = move_uploaded_file($_FILES['imagen1']['tmp_name'],$ruta);
-            }else{echo "errorimagen";}
+            }else{echo "errorimagen";
+                  exit();}
+            //Analizando el código: si las condiciones para subir una imagén se cumplen, la siguiente instrucción del código es
+            //agregar a la base de datos el producto. SI NO se cumplen las condiciones para agregar una imagen se devolverá "errorimagen" y
+            //después el códgigo continuara con la query de agregar el producto por lo cual aunque no haya nada que agregar se devolvera "exito".
+            //Entonces estariamos devolviendo 2 valores al mismo tiempo "errorimagen" y "exito", esto creara conflicto si estamos usando Ajax.
+            //Para evitar eso debemos detener el programa y salir de la ejecucion del codigo con "exit();"
         }
         //Subida de imagenes
+
+        mysqli_query($link,"insert into productos (nombre, precio, descripcion, id_categoria) VALUES ('$nombre','$precio','$descripcion','$idcategoria')");
+        cerrarconexion();
+        echo "exito";
 
     }else {
         echo "repetido";
