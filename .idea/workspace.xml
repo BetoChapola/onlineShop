@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5843e6e6-c6e1-41a6-a03b-e6f3e7cab019" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="5843e6e6-c6e1-41a6-a03b-e6f3e7cab019" name="Default" comment="Segundo commit:&#10;&#10;Se crea la tabla de imagenes y se valores en ella">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/productos/imagenes/63345957a6f12680ecdd0e1907a8096d.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/productos/imagenes/pooo_01.Success_Kid_3596018b.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/d71a1466-84d2-4190-a6db-760396042d61.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d71a1466-84d2-4190-a6db-760396042d61.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/productos/addproductos.php" afterPath="$PROJECT_DIR$/admin/productos/addproductos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/productos/formaddproductos.php" afterPath="$PROJECT_DIR$/admin/productos/formaddproductos.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,18 +34,6 @@
         <item name="shoponline@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="shoponline" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="shoponline@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="shoponline" type="e3449647:DbNodeDescriptor" />
-        <item name="categorias" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="shoponline@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="shoponline" type="e3449647:DbNodeDescriptor" />
-        <item name="productos" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
@@ -51,29 +42,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="formaddproductos.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="formaddproductos.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/productos/formaddproductos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="129" column="29" lean-forward="true" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+            <state relative-caret-position="117">
+              <caret line="155" column="59" lean-forward="false" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
               <folding>
-                <marker date="1568080345417" expanded="true" signature="90:103" ph="select * fro... " />
-                <marker date="1568080345417" expanded="true" signature="90:114" ph="select * fro... categorias" />
-                <marker date="1568080345417" expanded="true" signature="90:131" ph="select * fro... categorias" />
+                <element signature="e#3499#3502#0#HTML" expanded="false" />
+                <marker date="1568938531143" expanded="true" signature="90:103" ph="select * fro... " />
+                <marker date="1568938531143" expanded="true" signature="90:114" ph="select * fro... categorias" />
+                <marker date="1568938531143" expanded="true" signature="90:131" ph="select * fro... categorias" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addproductos.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addproductos.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/productos/addproductos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="281">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
-                <marker date="1568931700715" expanded="true" signature="364:370" ph="SELECT nombr... categorias" />
-                <marker date="1568931700715" expanded="true" signature="364:415" ph="SELECT nombr... productos" />
-                <marker date="1568931700715" expanded="true" signature="1985:2109" ph="insert into productos... " />
+                <element signature="e#518#1945#0#PHP" expanded="false" />
+                <element signature="e#1973#2723#0#PHP" expanded="false" />
+                <element signature="e#2751#3501#0#PHP" expanded="false" />
+                <marker date="1568944607310" expanded="true" signature="364:370" ph="SELECT nombr... categorias" />
+                <marker date="1568944607310" expanded="true" signature="364:415" ph="SELECT nombr... productos" />
+                <marker date="1568944607310" expanded="true" signature="3582:3706" ph="insert into productos... " />
+                <marker date="1568944607310" expanded="true" signature="3799:3857" ph="SELECT id_pr... productos" />
+                <marker date="1568944607310" expanded="true" signature="4045:4146" ph="insert into imagenes... " />
               </folding>
             </state>
           </provider>
@@ -94,6 +91,7 @@
       <find>buzz-</find>
       <find>selectcategoria</find>
       <find>formaddproductos</find>
+      <find>form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -388,8 +386,16 @@
       <workItem from="1568078054051" duration="2180000" />
       <workItem from="1568507602244" duration="1605000" />
       <workItem from="1568512352689" duration="654000" />
-      <workItem from="1568854919283" duration="7973000" />
+      <workItem from="1568854919283" duration="17357000" />
     </task>
+    <task id="LOCAL-00001" summary="Primer commit:&#10;&#10;Se explica el uso de exit();">
+      <created>1568931891895</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568931891895</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -401,7 +407,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268481000" />
+    <option name="totallyTimeSpent" value="277865000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -415,14 +421,15 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19419643" sideWeight="0.48381877" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19419643" sideWeight="0.48381877" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.50446427" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1688988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1688988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.48867315" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.48867315" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12783661" sideWeight="0.51618123" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39831933" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
@@ -465,11 +472,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit:&#10;&#10;Se explica el uso de exit();" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit:&#10;&#10;Se explica el uso de exit();" />
+    <MESSAGE value="Segundo commit:&#10;&#10;Se crea la tabla de imagenes y se valores en ella" />
+    <option name="LAST_COMMIT_MESSAGE" value="Segundo commit:&#10;&#10;Se crea la tabla de imagenes y se valores en ella" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -824,26 +832,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/productos/formaddproductos.php">
+    <entry file="file://$PROJECT_DIR$/admin/productos/addproductos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="129" column="29" lean-forward="true" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+        <state relative-caret-position="281">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
-            <marker date="1568080345417" expanded="true" signature="90:103" ph="select * fro... " />
-            <marker date="1568080345417" expanded="true" signature="90:114" ph="select * fro... categorias" />
-            <marker date="1568080345417" expanded="true" signature="90:131" ph="select * fro... categorias" />
+            <element signature="e#518#1945#0#PHP" expanded="false" />
+            <element signature="e#1973#2723#0#PHP" expanded="false" />
+            <element signature="e#2751#3501#0#PHP" expanded="false" />
+            <marker date="1568944607310" expanded="true" signature="364:370" ph="SELECT nombr... categorias" />
+            <marker date="1568944607310" expanded="true" signature="364:415" ph="SELECT nombr... productos" />
+            <marker date="1568944607310" expanded="true" signature="3582:3706" ph="insert into productos... " />
+            <marker date="1568944607310" expanded="true" signature="3799:3857" ph="SELECT id_pr... productos" />
+            <marker date="1568944607310" expanded="true" signature="4045:4146" ph="insert into imagenes... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/productos/addproductos.php">
+    <entry file="file://$PROJECT_DIR$/admin/productos/formaddproductos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="117">
+          <caret line="155" column="59" lean-forward="false" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
           <folding>
-            <marker date="1568931700715" expanded="true" signature="364:370" ph="SELECT nombr... categorias" />
-            <marker date="1568931700715" expanded="true" signature="364:415" ph="SELECT nombr... productos" />
-            <marker date="1568931700715" expanded="true" signature="1985:2109" ph="insert into productos... " />
+            <element signature="e#3499#3502#0#HTML" expanded="false" />
+            <marker date="1568938531143" expanded="true" signature="90:103" ph="select * fro... " />
+            <marker date="1568938531143" expanded="true" signature="90:114" ph="select * fro... categorias" />
+            <marker date="1568938531143" expanded="true" signature="90:131" ph="select * fro... categorias" />
           </folding>
         </state>
       </provider>

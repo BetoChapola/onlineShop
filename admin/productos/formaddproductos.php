@@ -58,6 +58,9 @@ if (isset($_SESSION['administrador'])){
                 document.formproductos.descripcion.value!=="" &&
                 document.formproductos.selectcategoria.value!==""){
 
+                var formData = new FormData($("#formAniadirProd")[0]); //Video 47, se agregan imagenes con Ajax, el codigo cambia un poco desde aqui
+                //Para enviar archivos por Ajax se necesita esta variable "formData", se enviara por Ajax un array que incluyan todos los archivos
+                //y el contenido de todos los campos del form. Las siguientes variables dejan de funcionar:
                 var nombrefr = document.formproductos.nombreproducto.value;
                 var preciofr = document.formproductos.precioproducto.value;
                 var descripcionfr = document.formproductos.descripcion.value;
@@ -66,23 +69,43 @@ if (isset($_SESSION['administrador'])){
                 $.ajax({
                     type: "POST",
                     url: "addproductos.php",
-                    data: {nombreproducto:nombrefr, //a:b la variable "a" pertenece al argumento que recibe el archivo addproductos,
-                           precioproducto:preciofr, //y el valor "b" es el valor que se envia por metodo POST desde el archivo formaddproductos.
-                           descripcion:descripcionfr, //para AGREGAR OTRO ELEMENTO EN AJAX SE USA "," EL ";" ES PARA TERMINAR OTRO BLOQUE DE INSTRUCCION
-                           selectcategoria:idcategoriafr},
+                    data: formData,
+                          cache: false,
+                          contentType: false,
+                          processData: false,
+
+                        //{
+                    //Este es el metodo para enviar como argumento lo que contiene el form, lo recibe como parametros el archivo "addproductos.php"
+                        //A partir del video 47 deja de ser util para hacer este mismo procedimiento con Ajax. La diferencia es que ahora enviaremos
+                        //un archivo dentro del argumento, esa es la razon por la que dejaremos de usarlo. Las variables quedan inutilizadas.
+//                        nombreproducto:nombrefr, //a:b la variable "a" pertenece al argumento que recibe el archivo addproductos,
+//                        precioproducto:preciofr, //y el valor "b" es el valor que se envia por metodo POST desde el archivo formaddproductos.
+//                        descripcion:descripcionfr, //para AGREGAR OTRO ELEMENTO EN AJAX SE USA "," EL ";" ES PARA TERMINAR OTRO BLOQUE DE INSTRUCCION
+//                        selectcategoria:idcategoriafr
+                    //},
                     
                     success:function (resp) {
+
+                        $("#errorimagen").hide("fast");
                         $("#repetido").hide("fast");
                         $("#exito").hide("fast");
 
                         if (resp==="exito"){
+                            $("#errorimagen").hide("fast");
                             $("#repetido").hide("fast");
                             $("#exito").show("slow");
                         }
 
                         if (resp==="repetido"){
+                            $("#errorimagen").hide("fast");
                             $("#exito").hide("fast");
                             $("#repetido").show("slow");
+                        }
+
+                        if (resp==="errorimagen"){
+                            $("#exito").hide("fast");
+                            $("#repetido").hide("fast");
+                            $("#errorimagen").show("slow");
                         }
                     }
 
@@ -115,7 +138,7 @@ if (isset($_SESSION['administrador'])){
 <!-- Formulario-->
 <div class="formulario">
     <!-- estructura del form -->
-    <form name="formproductos" method="post" action="addproductos.php" enctype="multipart/form-data">
+    <form name="formproductos" method="post" enctype="multipart/form-data" id="formAniadirProd">
         <!-- campo producto -->
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Producto</label>
@@ -189,10 +212,10 @@ if (isset($_SESSION['administrador'])){
             <p class="centrar"><strong>¡Ups!</strong> Debes seleccionar una categoría. <strong><a target="_blank" href="../categorias/formaddcategoria.php">Añadir categoría</a></strong></p>
         </div>
 
-        <!-- boton añadir -->
+        <!-- BOTON añadir -->
         <div class="form-group row">
             <div class="col-sm-10">
-                <button onclick="validarform()" type="submit" class="btn btn-primary" name="boton">Añadir</button><!--  -->
+                <button onclick="validarform()" type="button" class="btn btn-primary" name="boton">Añadir</button><!--  -->
             </div>
         </div>
 
@@ -203,6 +226,10 @@ if (isset($_SESSION['administrador'])){
         <!-- Alert el producto ya existe "repetido"-->
         <div class="alert alert-warning ocultar" role="alert" id="repetido"> <!-- Alert el producto ya existe -->
             <p class="centrar"><strong>¡Ups!</strong> El articulo ya existe</p>
+        </div>
+        <!-- Alert el producto ya existe "repetido"-->
+        <div class="alert alert-danger ocultar" role="alert" id="errorimagen"> <!-- Alert el producto ya existe -->
+            <p class="centrar"><strong>¡Ups!</strong> No se acepta ese tipo de archivos, o excedes el tamaño permitido (1 Megabyte)</p>
         </div>
     </form>
 </div>
