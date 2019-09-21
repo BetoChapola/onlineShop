@@ -79,10 +79,20 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
         //Zona de llenado de la tabla IMAGENES
         $registros = mysqli_query($link,"SELECT id_producto from productos WHERE nombre = '$nombre'");
         $fila = mysqli_fetch_array($registros);
-
+        //IMAGEN 1
         if ($_FILES['imagen1']['size'] !== 0){
             $nombreImagen = $_FILES['imagen1']['name'];
             mysqli_query($link,"insert into imagenes (nombre,prioridad,id_producto) VALUES ('$nombreImagen','1','$fila[id_producto]')");
+        }
+        //IMAGEN 2
+        if ($_FILES['imagen2']['size'] !== 0){
+            $nombreImagen = $_FILES ['imagen2']['name'];
+            mysqli_query($link,"INSERT INTO imagenes (nombre, prioridad, id_producto) VALUES ('$nombreImagen','2','$fila[id_producto]')");
+        }
+        //IMAGEN 3
+        if ($_FILES['imagen3']['size'] !== 0){
+            $nombreImagen = $_FILES ['imagen3']['name'];
+            mysqli_query($link,"INSERT INTO imagenes (nombre, prioridad, id_producto) VALUES ('$nombreImagen','3','$fila[id_producto]')");
         }
 
         cerrarconexion();
