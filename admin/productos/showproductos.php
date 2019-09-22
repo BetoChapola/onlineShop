@@ -52,7 +52,7 @@ if (isset($_SESSION['administrador'])){
 
     <?php
     include ("../../php/conexion.php");
-    $registros1 = mysqli_query($link,"SELECT * FROM productos order by id_producto DESC ");
+    $registros1 = mysqli_query($link,"SELECT * FROM productos order by nombre ASC");
     //cerrarconexion();
     ?>
 
@@ -78,7 +78,7 @@ if (isset($_SESSION['administrador'])){
                 <td><img width="70px" src="imagenes/<?php
                     if (mysqli_num_rows($registros2) != 0){
                         echo utf8_encode($fila2['nombre']);
-                    }else {echo "sin_imagen.jpg";} ?>">
+                    }else {echo "sin_imagen/sin_imagen.jpg";} ?>">
                 </td>
                 <td><?php echo utf8_encode($fila1['nombre'])."<br>"; ?></td>
                 <td><button type="button" onclick="modalVer('<?php echo $fila1['id_producto'];?>')" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Ver</button></td>
@@ -116,6 +116,8 @@ if (isset($_SESSION['administrador'])){
 
 </body>
     </html>
-<?php }
+<?php
+    cerrarconexion();
+}
 else{header('location:../index.php');}
 ?>

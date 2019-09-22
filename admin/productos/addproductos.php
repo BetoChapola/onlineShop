@@ -14,11 +14,11 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
 
         //Subida de imagenes
         //IMAGEN 1
-        if ($_FILES['imagen1']['size']!== 0){
+        if ($_FILES['imagen1']['name'] !== ""){
 
             $ext = explode (".",$_FILES['imagen1']['name']);
             $extension = end($ext);
-            $_FILES ['imagen1']['name'] = $nombre."_01.".$extension;
+            $_FILES ['imagen1']['name'] = time()."_01.".$extension;
 
             $permitidos = array("image/jpg","image/jpeg","image/gif","image/png");
             $limite_kb = 1000; //1024 bytes (1 kilobyte)
@@ -35,13 +35,13 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
             //después el códgigo continuara con la query de agregar el producto por lo cual aunque no haya nada que agregar se devolvera "exito".
             //Entonces estariamos devolviendo 2 valores al mismo tiempo "errorimagen" y "exito", esto creara conflicto si estamos usando Ajax.
             //Para evitar eso debemos detener el programa y salir de la ejecucion del codigo con "exit();"
-        }
+        }//revisar video 55 (se hicieron cambios)
         //IMAGEN 2
-        if ($_FILES['imagen2']['size'] !==0){
+        if ($_FILES['imagen2']['name'] !== ""){
 
             $ext = explode(".",$_FILES['imagen2']['name']);
             $extension = end($ext);
-            $_FILES['imagen2']['name'] = $nombre."_02.".$extension;
+            $_FILES['imagen2']['name'] = time()."_02.".$extension;
 
             $permitidos = array("image/jpg","image/jpeg","image/gif","image/png");
             $limite_kb = 1000; //1024 bytes (1 kilobyte)
@@ -53,13 +53,13 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
                 $resultado = move_uploaded_file($_FILES['imagen2']['tmp_name'],$ruta);
             }else{echo "errorimagen";
                 exit();}
-        }
+        }//revisar video 55 (se hicieron cambios)
         //IMAGEN 3
-        if ($_FILES['imagen3']['size'] !==0){
+        if ($_FILES['imagen3']['name'] !== ""){
 
             $ext = explode(".",$_FILES['imagen3']['name']);
             $extension = end($ext);
-            $_FILES['imagen3']['name'] = $nombre."_03.".$extension;
+            $_FILES['imagen3']['name'] = time()."_03.".$extension;
 
             $permitidos = array("image/jpg","image/jpeg","image/gif","image/png");
             $limite_kb = 1000; //1024 bytes (1 kilobyte)
@@ -71,7 +71,7 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
                 $resultado = move_uploaded_file($_FILES['imagen3']['tmp_name'],$ruta);
             }else{echo "errorimagen";
                 exit();}
-        }
+        }//revisar video 55 (se hicieron cambios)
 
         //Query para INSERTAR PRODUCTOS a la tabla
         mysqli_query($link,"insert into productos (nombre, precio, descripcion, id_categoria) VALUES ('$nombre','$precio','$descripcion','$idcategoria')");
