@@ -48,6 +48,13 @@ if (isset($_SESSION['administrador'])){
 
 <body>
 <div class="tcat">PRODUCTOS</div>
+<?php if(isset($_GET['alert'])){ ?>
+<!-- Alert EXITO al añadir "exito"-->
+<div class="alert alert-success" role="alert" id="exito"> <!-- Alert SE HA MODIFICADO EL producto -->
+    <p class="centrar"><strong>¡Bien!</strong> Se ha modificado el artículo correctamente</p>
+</div>
+<?php } ?>
+
 <div class="showcategorias">
 
     <?php
@@ -82,7 +89,7 @@ if (isset($_SESSION['administrador'])){
                 </td>
                 <td><?php echo utf8_encode($fila1['nombre'])."<br>"; ?></td>
                 <td><button type="button" onclick="modalVer('<?php echo $fila1['id_producto'];?>')" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Ver</button></td>
-                <td><a href=""><button type="button" class="btn btn-success">Editar</button></a></td>
+                <td><a href="formeditproductos.php?idproducto=<?php echo $fila1['id_producto']?>"><button type="button" class="btn btn-success">Editar</button></a></td>
                 <td><a onclick="eliminar()"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
             </tr>
             </tbody>

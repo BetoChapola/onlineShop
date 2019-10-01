@@ -83,7 +83,7 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
         if ($_FILES['imagen1']['size'] !== 0){
             $nombreImagen = $_FILES['imagen1']['name'];
             mysqli_query($link,"insert into imagenes (nombre,prioridad,id_producto) VALUES ('$nombreImagen','1','$fila[id_producto]')");
-        }
+        }//revisar video 55 (se hicieron cambios), En esta parte de codigo no realice el cambio del video, porque si solo agrego 2 imagenes en la bd se guarda en la tabla imagenes el correspondiente a la imagen 3 aunque este vacia.
         //IMAGEN 2
         if ($_FILES['imagen2']['size'] !== 0){
             $nombreImagen = $_FILES ['imagen2']['name'];
