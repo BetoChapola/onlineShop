@@ -2,9 +2,10 @@
 session_start();
 if (isset($_SESSION['administrador'])){
 
+
     if ($_POST['categoria']!=""){
         include ("../../php/conexion.php");
-        $categoria=utf8_decode($_POST['categoria']);
+        $categoria=($_POST['categoria']);
         $registros=mysqli_query($link,"SELECT categoria FROM categorias WHERE categoria='$categoria'");
 
         if (mysqli_num_rows($registros)==0){
@@ -16,4 +17,6 @@ if (isset($_SESSION['administrador'])){
         //echo $_POST['categoria'];
     }elseif ($_POST['categoria']==""){
         header('location:formaddcategoria.php?alert=2');} //Alert 2
-}else{header('location:../index.php');}
+
+
+}else{header('location:../index.php');}//Si no es el administrador se retorna al index.

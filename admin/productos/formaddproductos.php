@@ -153,7 +153,7 @@ if (isset($_SESSION['administrador'])){
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Precio</label>
             <div class="col-sm-10">
-                <input onkeypress="preciovalidado()" type="float" class="form-control" id="inputEmail3" placeholder="Precio del Producto" name="precioproducto">
+                <input onkeypress="preciovalidado()" type="number" class="form-control" id="inputEmail3" placeholder="Precio del Producto" name="precioproducto">
             </div>
         </div>
         <div class="alert alert-warning ocultar" role="alert" id="alertprecio"> <!-- Alert: PRECIO-->
@@ -176,7 +176,7 @@ if (isset($_SESSION['administrador'])){
             <div class="col-sm-10">
                 <select class="form-control" id="FormControlSelect1" name="selectcategoria">
                     <?php while ($fila=mysqli_fetch_array($registros)){ ?>
-                        <option value="<?php echo $fila['id'] ?>"><?php echo utf8_encode($fila['categoria']); ?></option>
+                        <option value="<?php echo $fila['id'] ?>"><?php echo ($fila['categoria']); ?></option>
                     <?php } ?>
                 </select>
             </div>

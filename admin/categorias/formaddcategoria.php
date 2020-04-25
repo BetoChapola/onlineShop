@@ -9,7 +9,7 @@ if (isset($_SESSION['administrador'])){
 <html lang="en">
 <head>
 
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -55,7 +55,7 @@ if (isset($_SESSION['administrador'])){
         case 1: ?>
         <div class="alert alert-success" role="alert"> <!-- Alert 1: SE HA AÑADIDO EL ARTICULO-->
             <p class="centrar"><strong>¡Bien!</strong> Se ha añadido el artículo
-                <strong><?php echo utf8_encode($_GET['categoria']) ?></strong></p>
+                <strong><?php echo ($_GET['categoria']) ?></strong></p>
         </div>
         <?php
         break;
@@ -76,8 +76,8 @@ if (isset($_SESSION['administrador'])){
 
         case 4: ?>
         <div class="alert alert-success" role="alert"> <!-- Alert 4: SE MODIFICO LA CATEGORA-->
-            <p class="centrar"><strong>¡Bien!</strong> Modificaste <strong><?php echo utf8_encode($_GET['categoriavieja']) ?>
-                </strong> por <strong><?php echo utf8_encode($_GET['categorianueva']) ?></strong></p>
+            <p class="centrar"><strong>¡Bien!</strong> Modificaste <strong><?php echo ($_GET['categoriavieja']) ?>
+                </strong> por <strong><?php echo ($_GET['categorianueva']) ?></strong></p>
         </div>
         <?php
             break;
@@ -142,7 +142,7 @@ if (isset($_SESSION['administrador'])){
     </form>
 </div>
 
-<!-- Tabla de categorias-->
+<!-- TABAL DE CATEGORIAS-->
 <div class="showcategorias">
 
     <?php
@@ -166,7 +166,7 @@ if (isset($_SESSION['administrador'])){
         <tbody>
         <tr id="<?php echo $fila['id']; ?>">
             <th scope="row"><?php echo $fila['id']; ?></th>
-            <td><?php echo utf8_encode($fila['categoria'])."<br>"; ?></td>
+            <td><?php echo ($fila['categoria'])."<br>"; ?></td>
             <td><a href="formeditcategoria.php?categoriavieja=<?php echo utf8_encode($fila['categoria']); ?>"><button type="button" class="btn btn-success">Editar</button></a></td>
             <td><a onclick="eliminar('<?php echo $fila['id']; ?>')"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
         </tr>

@@ -3,9 +3,9 @@ session_start();
 include ("../../php/conexion.php");
 
 if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
-    $nombre = utf8_decode($_POST['nombreproducto']);
+    $nombre = ($_POST['nombreproducto']);
     $precio = $_POST['precioproducto'];
-    $descripcion = utf8_decode($_POST['descripcion']);
+    $descripcion = ($_POST['descripcion']);
     $idcategoria = $_POST['selectcategoria'];
 
     $registros=mysqli_query($link,"SELECT nombre from productos WHERE nombre='$nombre'");
@@ -19,6 +19,8 @@ if(isset($_SESSION['administrador']) && isset($_POST['nombreproducto'])){
             $ext = explode (".",$_FILES['imagen1']['name']);
             $extension = end($ext);
             $_FILES ['imagen1']['name'] = time()."_01.".$extension;
+            //Podemos usar el nombre del producto como nombre de la imagen:
+            //$_FILES ['imagen1']['name'] = $nombre."_01.".$extension;
 
             $permitidos = array("image/jpg","image/jpeg","image/gif","image/png");
             $limite_kb = 1000; //1024 bytes (1 kilobyte)

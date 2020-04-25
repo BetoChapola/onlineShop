@@ -50,7 +50,7 @@ if (isset($_SESSION['administrador'])){
 <div class="tcat">PRODUCTOS</div>
 <?php if(isset($_GET['alert'])){ ?>
 <!-- Alert EXITO al añadir "exito"-->
-<div class="alert alert-success" role="alert" id="exito"> <!-- Alert SE HA MODIFICADO EL producto -->
+<div class="alert alert-success alert-dismissible fade show" role="alert" id="exito"> <!-- Alert SE HA MODIFICADO EL producto -->
     <p class="centrar"><strong>¡Bien!</strong> Se ha modificado el artículo correctamente</p>
 </div>
 <?php } ?>
