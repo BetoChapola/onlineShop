@@ -21,7 +21,7 @@ if (isset($_SESSION['administrador'])){
     echo "<b>Nombre: </b>".utf8_encode($fila1['nombre'])."<br>";
     echo "<b>Precio: </b>".utf8_encode($fila1['precio'])."<br>";
     echo "<b>Descripción: </b>".utf8_encode($fila1['descripcion'])."<br>";
-    echo "<b>Categoria: </b>".utf8_encode($fila2['categoria'])."<br><br>";
+    echo "<b>Categoria: </b>".($fila2['categoria'])."<br><br>";
 
     if (mysqli_num_rows($registros3) != 0){
         while ($fila3 = mysqli_fetch_array($registros3)){

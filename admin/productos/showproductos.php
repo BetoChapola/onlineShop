@@ -3,127 +3,200 @@ session_start();
 ?>
 <?php
 if (isset($_SESSION['administrador'])){
-?>
-
-<!doctype html>
-<html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Online Shop</title>
-
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> <!-- dns para font Ubuntu -->
-    <link rel="stylesheet" href="../../css/estilos.css">
-    <link rel="stylesheet" href="../../css/normalizar.css">
-    <link rel="stylesheet" href="../admin.css">
-
-    <!-- Bootstrap-->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-
-    <!-- Bootstrap-->
-
-
-    <script>
-        function modalVer(id){
-            $.ajax({
-
-                type: 'POST',
-                url: 'verproducto.php',
-                data: 'idproducto='+id,
-
-                success: function (resp) {
-                    $('#divResultados').html(resp);
-                }
-
-            })
-        }
-    </script>
-
-</head>
-
-<body>
-<div class="tcat">PRODUCTOS</div>
-<?php if(isset($_GET['alert'])){ ?>
-<!-- Alert EXITO al añadir "exito"-->
-<div class="alert alert-success alert-dismissible fade show" role="alert" id="exito"> <!-- Alert SE HA MODIFICADO EL producto -->
-    <p class="centrar"><strong>¡Bien!</strong> Se ha modificado el artículo correctamente</p>
-</div>
-<?php } ?>
-
-<div class="showcategorias">
-
-    <?php
-    include ("../../php/conexion.php");
-    $registros1 = mysqli_query($link,"SELECT * FROM productos order by nombre ASC");
-    //cerrarconexion();
     ?>
 
-    <table class="table table-hover">
-        <!--<thead>
-        <tr>
-            <th scope="colgroup">ID</th>
-            <th scope="col">Categoria</th>
-            <th scope="colgroup">Acciones</th>
-        </tr>
-        </thead>-->
+    <!doctype html>
+    <html lang="en">
+    <head>
 
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Online Shop</title>
+
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> <!-- dns para font Ubuntu -->
+        <link rel="stylesheet" href="../../css/estilos.css">
+        <link rel="stylesheet" href="../../css/normalizar.css">
+        <link rel="stylesheet" href="../admin.css">
+
+        <!-- Bootstrap-->
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap-->
+
+
+        <script>
+            function enchufe(id) {
+                var name = document.getElementsByName(id)
+                for(var i=0;i<name.length;i++){
+                    if (name[i].checked){
+                        name = name[i].value;
+                    }
+                }
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "interruptor.php",
+                    data: {"id_producto":id,
+                            "interruptor":name}
+                });
+            }
+
+            function modalVer(id){
+                $.ajax({
+
+                    type: 'POST',
+                    url: 'verproducto.php',
+                    data: 'idproducto='+id,
+
+                    success: function (resp) {
+                        $('#divResultados').html(resp);
+                    }
+
+                })
+            }
+
+            function eliminar(id) {
+                if (confirm("¿eliminar?")){
+                    $.ajax({
+                        type: "POST",
+                        url: "deleteproducto.php",
+                        data: 'idproducto='+id
+                    });
+
+                    $("#"+id).hide("slow");
+                }
+            }
+        </script>
+
+    </head>
+
+    <body>
+    <!----------------------  CARGA.GIF  --------------------->
+    <img src="../../imagenes/cargando3.gif">
+    <!----------------------  CARGA.GIF  --------------------->
+
+    <div class="tcat">PRODUCTOS</div>
+    <!------------------------  ALERT  ----------------------->
+    <?php if(isset($_GET['alert'])){ ?><!-- Alert EXITO al añadir "exito"-->
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="exito"> <!-- Alert SE HA MODIFICADO EL producto -->
+        <p class="centrar"><strong>¡Bien!</strong> Se ha modificado el artículo correctamente</p>
+    </div>
+    <?php } ?>
+    <!------------------------  ALERT  ----------------------->
+
+    <div class="showcategorias">
+        <!---------------------- PAGINADOR-------------------->
         <?php
-        while($fila1=mysqli_fetch_array($registros1)){
-            $registros2 = mysqli_query($link,"SELECT nombre from imagenes WHERE id_producto = '$fila1[id_producto]' and prioridad ='1'");
+        include ("../../php/conexion.php");
 
-            $fila2 = mysqli_fetch_array($registros2);
-            ?>
+        $registros = mysqli_query($link,"select id_producto from productos") or die("Error al conectar con la tabla".mysqli_error());
+        $total_registros = mysqli_num_rows($registros);
 
-            <tbody>
-            <tr id="<?php echo $fila1['id']; ?>">
-                <th scope="row"><?php echo $fila1['id_producto']; ?></th>
-                <td><img width="70px" src="imagenes/<?php
-                    if (mysqli_num_rows($registros2) != 0){
-                        echo utf8_encode($fila2['nombre']);
-                    }else {echo "sin_imagen/sin_imagen.jpg";} ?>">
-                </td>
-                <td><?php echo utf8_encode($fila1['nombre'])."<br>"; ?></td>
-                <td><button type="button" onclick="modalVer('<?php echo $fila1['id_producto'];?>')" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Ver</button></td>
-                <td><a href="formeditproductos.php?idproducto=<?php echo $fila1['id_producto']?>"><button type="button" class="btn btn-success">Editar</button></a></td>
-                <td><a onclick="eliminar()"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
-            </tr>
-            </tbody>
+        $TAMAÑO_PAGINA = 3;
+        $pagina = false;
 
-            <?php
+        if (isset($_GET["pagina"])){$pagina = $_GET["pagina"];}
+
+        if(!$pagina){
+            $inicio = 0;
+            $pagina = 1;
         }
-        ?>
-    </table>
-</div>
+        else {$inicio = ($pagina - 1) * $TAMAÑO_PAGINA;}
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Detalle del producto</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div id="divResultados">
+        $total_paginas = ceil($total_registros / $TAMAÑO_PAGINA);
+
+        $registros1 =mysqli_query($link,"select * from productos ORDER BY id_producto ASC LIMIT ".$inicio.","."$TAMAÑO_PAGINA")
+        or die("Error al conectar con ls tabla".mysqli_error($link));
+
+        ?>
+        <!---------------------- PAGINADOR-------------------->
+
+        <!------------------------ TABLA --------------------->
+        <table class="table table-hover">
+            <?php
+            while($fila1=mysqli_fetch_array($registros1)){
+                $registros2 = mysqli_query($link,"SELECT nombre from imagenes WHERE id_producto = '$fila1[id_producto]' and prioridad ='1'");
+                $fila2 = mysqli_fetch_array($registros2);
+                ?>
+
+                <tbody>
+                <tr id="<?php echo $fila1['id_producto']; ?>">
+                    <!--<th scope="row"><?php echo $fila1['id_producto']; ?></th> -->
+                    <td><img width="70px" src="imagenes/<?php
+                        if (mysqli_num_rows($registros2) != 0){
+                            echo ($fila2['nombre']);
+                        }else{
+                            echo "sin_imagen/sin_imagen.jpg";} ?>"></td>
+                    <td><?php echo utf8_encode($fila1['nombre'])."<br>"; ?></td>
+                    <td><button type="button" onclick="modalVer('<?php echo $fila1['id_producto'];?>')" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Ver</button></td>
+                    <td><a href="formeditproductos.php?idproducto=<?php echo $fila1['id_producto']?>"><button type="button" class="btn btn-success">Editar</button></a></td>
+                    <td><a onclick="eliminar('<?php echo $fila1['id_producto']; ?>')"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
+                    <!-- CheckBox -->
+                        <?php
+                        $registros3 = mysqli_query($link,"select inicio from productos where id_producto = '$fila1[id_producto]'");
+                        $fila3 = mysqli_fetch_array($registros3);?>
+                    <form>
+                        <td><input type="radio" onclick="enchufe('<?php echo $fila1['id_producto']?>')" name="<?php echo $fila1['id_producto']?>" value="activado"<?php if ($fila3['inicio'] == 1){echo "checked";} ?>>On</td>
+                        <td><input type="radio" onclick="enchufe('<?php echo $fila1['id_producto']?>')" name="<?php echo $fila1['id_producto']?>" value="desactivado"<?php if ($fila3['inicio'] == 0){echo "checked";} ?>>Off</td>
+                    </form>
+                    <!-- CheckBox -->
+                </tr>
+                </tbody>
+
+                <?php
+            }
+            ?>
+        </table>
+        <!------------------------ TABLA --------------------->
+    </div>
+
+    <!--------------------BOTONES PAGINADOR------------------->
+    <div style="margin-top: 150px"><nav><?php
+            if ($total_paginas > 1){
+
+                if($pagina != 1){echo '<a href = "showproductos.php?pagina='.($pagina - 1).'"> Anterior </a>';}
+
+                for ($i = 1; $i <= $total_paginas; $i++){
+                    if ($pagina == $i){echo $pagina;} else {echo '<a href = "showproductos.php?pagina='.$i.'">'.$i.' </a>';}
+                }
+
+                if ($pagina != $total_paginas){echo '<a href = "showproductos.php?pagina='.($pagina + 1).'"> Siguiente </a>';}
+            }
+
+            echo '</p>'
+            ?></nav></div>
+    <!--------------------BOTONES PAGINADOR------------------->
+
+    <!------------------------  MODAL  ----------------------->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Detalle del producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <div class="modal-body">
+                    <div id="divResultados">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!------------------------  MODAL  ----------------------->
+    </body>
 
-</body>
     </html>
-<?php
+    <?php
     cerrarconexion();
 }
 else{header('location:../index.php');}

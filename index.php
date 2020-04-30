@@ -1,7 +1,8 @@
 <?php
 include ("php/conexion.php");
-$registros = mysqli_query($link,"SELECT * FROM categorias order by categoria ");
-cerrarconexion();
+$registros0 = mysqli_query($link,"SELECT * FROM categorias order by categoria ASC ");
+
+$registros1 = mysqli_query($link,"select id_producto, precio from productos WHERE inicio = 1 LIMIT 0,12");
 ?>
 
 <!doctype html>
@@ -39,7 +40,8 @@ cerrarconexion();
 </head>
 
 <body>
-<header>
+
+<header> <!-- Header-->
     <div class="cabecera"></div>
     <nav class="wow bounceInDown" data-wow-duration="1.5s">
         <!-- Start css3menu.com BODY section -->
@@ -47,24 +49,24 @@ cerrarconexion();
         <ul id="css3menu1" class="topmenu">
             <li class="switch"><label onclick="" for="css3menu-switcher"></label></li>
             <li class="topmenu"><a class="pressed" href="#" style="width:224px;height:56px;line-height:56px;"><img src="menucss/menucss/home.png" alt=""/>Home</a></li>
-            <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="menucss/menucss/buy.png" alt=""/>Product</a>
+            <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="menucss/menucss/buy.png" alt=""/>Producto</a>
 
                 <ul>
-                    <?php while($fila=mysqli_fetch_array($registros)){ ?>
-                    <li><a href=""><?php echo utf8_encode($fila['categoria']);?></a></li>
+                    <?php while($fila0=mysqli_fetch_array($registros0)){ ?>
+                    <li><a href=""><?php echo $fila0['categoria'];?></a></li>
                     <?php } ?>
                 </ul>
 
             </li>
-            <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="menucss/menucss/contact.png" alt=""/>Contact</a></li>
-            <li class="toproot"><a href="#" style="width:223px;height:56px;line-height:56px;"><span><img src="menucss/menucss/register.png" alt=""/>Private</span></a>
+            <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="menucss/menucss/contact.png" alt=""/>Contacto</a></li>
+            <li class="toproot"><a href="#" style="width:223px;height:56px;line-height:56px;"><span><img src="menucss/menucss/register.png" alt=""/>Privado</span></a>
                 <ul>
-                    <li><a href="#">Acces</a></li>
-                    <li><a href="#">Register Now</a></li>
+                    <li class="topmenu"><a href="#">Acces</a></li>
+                    <li class="topmenu"><a href="#">Register Now</a></li>
                 </ul></li>
         </ul>
         <!-- End css3menu.com BODY section -->
-    </nav>
+    </nav> <!-- Menu-->
     <div class="slider wow bounceInUp" data-wow-duration="1.5s">
 
         <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
@@ -83,19 +85,28 @@ cerrarconexion();
         <script type="text/javascript" src="engine1/script.js"></script>
         <!-- End WOWSlider.com BODY section -->
 
-    </div>
+    </div> <!-- Slider-->
 </header>
+
     <div class="main">
-        <div class="productosmain hvr-buzz-out"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div> <!-- el ancho al 100% de la imagen se adapta al 100% del div "productosmain"-->
-        <div class="productosmain"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div>
-        <div class="productosmain"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div>
-        <div class="productosmain"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div>
-        <div class="productosmain"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div>
-        <div class="productosmain"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div>
-        <div class="productosmain"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div>
-        <div class="productosmain"><img src="imagenes/portatil1.jpg" width="100%" alt="portatil1"><div class="precio">PRECIO</div></div>
+        <?php while($fila1 = mysqli_fetch_array($registros1)) {
+            $registros2 = mysqli_query($link,"select nombre from imagenes where id_producto = '$fila1[id_producto]' and prioridad = 1");
+            $fila2 = mysqli_fetch_array($registros2)
+            ?>
+            <div class="productosmain hvr-buzz-out">
+                <img src="admin/productos/imagenes/<?php if(mysqli_num_rows($registros2) > 0) echo $fila2['nombre']; else echo "sinimagen.jpg"?>" width="100%" alt="portatil1">
+
+
+                <div class="precio">$<?php echo $fila1['precio']; ?> Pesos.</div>
+        </div> <!-- el ancho al 100% de la imagen se adapta al 100% del div "productosmain"-->
+            <?php
+        }
+        cerrarconexion();
+        ?>
         <div class="limpiar"></div>
     </div>
+
+<!-- Footer-->
 <footer class="wow bounceInDown" data-wow-duration="1.5s"><p>Todos los derechos reservados onlineshop.com</p></footer>
 </body>
 </html>

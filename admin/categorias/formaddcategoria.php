@@ -167,8 +167,14 @@ if (isset($_SESSION['administrador'])){
         <tr id="<?php echo $fila['id']; ?>">
             <th scope="row"><?php echo $fila['id']; ?></th>
             <td><?php echo ($fila['categoria'])."<br>"; ?></td>
-            <td><a href="formeditcategoria.php?categoriavieja=<?php echo utf8_encode($fila['categoria']); ?>"><button type="button" class="btn btn-success">Editar</button></a></td>
-            <td><a onclick="eliminar('<?php echo $fila['id']; ?>')"><button type="button" class="btn btn-danger">Eliminar</button></a></td>
+            <td><a href="formeditcategoria.php?categoriavieja=<?php echo $fila['categoria']; ?>">
+                    <button type="button" class="btn btn-success">Editar</button>
+                </a>
+            </td>
+            <td><a onclick="eliminar('<?php echo $fila['id']; ?>')">
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </a>
+            </td>
         </tr>
         </tbody>
 
