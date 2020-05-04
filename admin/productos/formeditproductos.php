@@ -4,7 +4,6 @@ session_start();
 if (isset($_SESSION['administrador']) && $_GET['idproducto'] != ""){
     include ("../../php/conexion.php");
     $registros = mysqli_query($link,"SELECT id_producto,nombre,precio,descripcion FROM productos WHERE id_producto= '$_GET[idproducto]'");
-    cerrarconexion();
     $filas = mysqli_fetch_array($registros);
 ?>
 <!doctype html>
@@ -71,6 +70,7 @@ if (isset($_SESSION['administrador']) && $_GET['idproducto'] != ""){
     </html>
 
 <?php
+    cerrarconexion();
 }
 else{header('location:../index.php');}
 ?>

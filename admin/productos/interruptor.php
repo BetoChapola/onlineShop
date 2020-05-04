@@ -1,4 +1,7 @@
 <?php
+//sleep es solo para crear un efecto del retraso que normalmente pasa en internet.
+//Ya que nuestra maquina es servidor y cliente al mismo tiempo, eso no sucede y tenemos que crearlo con sleep(1);
+sleep(1);
 session_start();
 
 if (isset($_SESSION['administrador']) and isset($_POST['interruptor']) != ""

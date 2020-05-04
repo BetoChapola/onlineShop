@@ -3,6 +3,8 @@ session_start();
 ?>
 <?php
 if (isset($_SESSION['administrador'])){
+
+    include ("../../php/conexion.php");
     ?>
 
     <!doctype html>
@@ -16,6 +18,7 @@ if (isset($_SESSION['administrador'])){
         <title>Online Shop</title>
 
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> <!-- dns para font Ubuntu -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../../css/estilos.css">
         <link rel="stylesheet" href="../../css/normalizar.css">
         <link rel="stylesheet" href="../admin.css">
@@ -42,7 +45,19 @@ if (isset($_SESSION['administrador'])){
                     type: "POST",
                     url: "interruptor.php",
                     data: {"id_producto":id,
-                            "interruptor":name}
+                            "interruptor":name},
+
+                    //antes de enviar (beforeSend) datos al servidor.
+                    beforeSend:function () {
+                        $("#carga").show("fast");
+                    },
+                    //cuando obtenemos exitosamente la respuesta del servidor
+                    success:function (respuesta) {
+                        $("#carga").hide("fast");
+                        $("#divResultados2").html(respuesta);
+                        $("#myModal2").modal("toggle");
+                    }
+
                 });
             }
 
@@ -77,7 +92,7 @@ if (isset($_SESSION['administrador'])){
 
     <body>
     <!----------------------  CARGA.GIF  --------------------->
-    <img src="../../imagenes/cargando3.gif">
+    <div class="ocultar absoluta" id="carga"><img src="../../imagenes/cargando3.gif"></div>
     <!----------------------  CARGA.GIF  --------------------->
 
     <div class="tcat">PRODUCTOS</div>
@@ -90,11 +105,14 @@ if (isset($_SESSION['administrador'])){
     <!------------------------  ALERT  ----------------------->
 
     <div class="showcategorias">
+        <?php $total_productos = mysqli_query($link,"select count(*) as total from productos") or die("Error al conectar con la tabla".mysqli_error($link));
+        $total_filas = mysqli_fetch_array($total_productos);
+        ?>
+        <p class="fuente"><span style="color: dodgerblue">Total: </span><?php echo $total_filas ['total']?> productos.</p>
         <!---------------------- PAGINADOR-------------------->
         <?php
-        include ("../../php/conexion.php");
 
-        $registros = mysqli_query($link,"select id_producto from productos") or die("Error al conectar con la tabla".mysqli_error());
+        $registros = mysqli_query($link,"select id_producto from productos") or die("Error al conectar con la tabla".mysqli_error($link));
         $total_registros = mysqli_num_rows($registros);
 
         $TAMAÑO_PAGINA = 3;
@@ -172,7 +190,7 @@ if (isset($_SESSION['administrador'])){
             ?></nav></div>
     <!--------------------BOTONES PAGINADOR------------------->
 
-    <!------------------------  MODAL  ----------------------->
+    <!------------------------  MODAL 1  ----------------------->
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -183,8 +201,7 @@ if (isset($_SESSION['administrador'])){
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div id="divResultados">
-                    </div>
+                    <div id="divResultados"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -192,7 +209,27 @@ if (isset($_SESSION['administrador'])){
             </div>
         </div>
     </div>
-    <!------------------------  MODAL  ----------------------->
+    <!------------------------  MODAL 1  ----------------------->
+    <!------------------------  MODAL 2  ----------------------->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Información:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="divResultados2"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------  MODAL 2  ----------------------->
     </body>
 
     </html>

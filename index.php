@@ -1,8 +1,7 @@
 <?php
 include ("php/conexion.php");
-$registros0 = mysqli_query($link,"SELECT * FROM categorias order by categoria ASC ");
-
-$registros1 = mysqli_query($link,"select id_producto, precio from productos WHERE inicio = 1 LIMIT 0,12");
+$registros0 = mysqli_query($link,"SELECT * FROM categorias order by categoria ASC");
+$registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from productos WHERE inicio = 1 LIMIT 0,12");
 ?>
 
 <!doctype html>
@@ -28,13 +27,12 @@ $registros1 = mysqli_query($link,"select id_producto, precio from productos WHER
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- Bootstrap-->
 
-    <!-- Start css3menu.com HEAD section -->
+    <!-- MENU -->
     <link rel="stylesheet" href="menucss/menucss/style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
-    <!-- End css3menu.com HEAD section -->
+    <!-- MENU -->
 
     <!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
     <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-
     <!-- End WOWSlider.com HEAD section -->
 
 </head>
@@ -53,7 +51,7 @@ $registros1 = mysqli_query($link,"select id_producto, precio from productos WHER
 
                 <ul>
                     <?php while($fila0=mysqli_fetch_array($registros0)){ ?>
-                    <li><a href=""><?php echo $fila0['categoria'];?></a></li>
+                    <li><a href="mostrarproductos.php?id_categoria=<?php echo $fila0['id'];?>"><?php echo $fila0['categoria'];?></a></li>
                     <?php } ?>
                 </ul>
 
@@ -93,12 +91,12 @@ $registros1 = mysqli_query($link,"select id_producto, precio from productos WHER
             $registros2 = mysqli_query($link,"select nombre from imagenes where id_producto = '$fila1[id_producto]' and prioridad = 1");
             $fila2 = mysqli_fetch_array($registros2)
             ?>
-            <div class="productosmain hvr-buzz-out">
-                <img src="admin/productos/imagenes/<?php if(mysqli_num_rows($registros2) > 0) echo $fila2['nombre']; else echo "sinimagen.jpg"?>" width="100%" alt="portatil1">
-
-
-                <div class="precio">$<?php echo $fila1['precio']; ?> Pesos.</div>
-        </div> <!-- el ancho al 100% de la imagen se adapta al 100% del div "productosmain"-->
+        <a href="detalleproducto.php?id_categoria=<?php echo $fila1['id_categoria'];?>&id_producto=<?php echo $fila1['id_producto'];?>">
+                <div class="productosmain hvr-buzz-out">
+                    <img src="admin/productos/imagenes/<?php if(mysqli_num_rows($registros2) > 0) echo $fila2['nombre']; else echo "sinimagen.jpg"?>" width="100%" alt="portatil1">
+                    <div class="precio">$<?php echo $fila1['precio']; ?> Pesos.</div>
+                </div>
+            <!-- el ancho al 100% de la imagen se adapta al 100% del div "productosmain"-->
             <?php
         }
         cerrarconexion();

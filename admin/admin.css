@@ -1,6 +1,6 @@
 .tadministrador{text-align: center; font-size: 50px; font-family: "Ubuntu"}
 
-.formulario{max-width:700px; width: 100%; margin: 50px auto 0px auto;}
+.formulario{max-width:700px; width: 100%; margin: 50px auto 0 auto;}
 
 .ajusteEspecial{margin-left: 122px}
 
@@ -10,3 +10,18 @@
 
 /* formaddproducto.php */
 .ocultar{display: none}
+
+/* showproductos.php*/
+.absoluta{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -123px;
+}
+
+/* showproductos.php*/
+
+.fuente{
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
