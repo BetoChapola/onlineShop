@@ -1,10 +1,10 @@
-.cabecera {background-color: darkslategrey; height: 108px;
+.cabecera {background-color: darkslategrey; height: 180px;
             }
 
 nav {/*background-color: aliceblue;*/
     height: 80px;
     margin: 0 auto;
-    margin-top: -90px;
+    margin-top: -150px;
     text-align: center;
 }
 
@@ -16,7 +16,7 @@ nav {/*background-color: aliceblue;*/
         width: 95%;
         max-width: 1200px;
         min-height: 600px;
-        margin: 25px auto 20px auto;
+        margin: 70px auto 20px auto;
 }
 
 .main .productosmain {width: 24.4%;
@@ -69,4 +69,52 @@ footer p{color: gold;
 /*destallesproducto.php*/
 .ocultar{
     display: none;
+}
+
+/*buscador*/
+.form1{
+    width: 300px;
+}
+.fieldset1{
+    background-color: #fff;
+    padding: 0px 0 0 40px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.input1, .button1{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 30px;
+    padding: 0px;
+}
+.input1{
+    border: none;
+    color: #666;
+    z-index: 2;
+}
+.button1{
+    width: 50px;
+    border: 1px solid #666;
+    background-color: #333;
+    transform: translate(-50px,0);
+    transition-duration: .3s;
+}
+.fa{
+    transform: translate(-200px,0px);
+    transition: all .1s ease-in-out;
+    color: #999;
+}
+.input1:focus{
+    outline: none;
+}
+.input1:focus + .button1{
+    transform: translate(0,0);
+    transition-duration: .3s;
+    font-size: 17px;
+}
+.input1:focus + .button1 .fa{
+    transform: translate(0,0);
+    transition-duration: .7s;
+    color: #fff;
 }

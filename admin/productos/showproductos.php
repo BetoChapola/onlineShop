@@ -115,7 +115,7 @@ if (isset($_SESSION['administrador'])){
         $registros = mysqli_query($link,"select id_producto from productos") or die("Error al conectar con la tabla".mysqli_error($link));
         $total_registros = mysqli_num_rows($registros);
 
-        $TAMAÑO_PAGINA = 3;
+        $TAMAÑO_PAGINA = 10;
         $pagina = false;
 
         if (isset($_GET["pagina"])){$pagina = $_GET["pagina"];}

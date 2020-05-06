@@ -13,6 +13,7 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online Shop</title>
 
+    <link rel="stylesheet" href="iconos/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/normalizar.css">
     <link rel="stylesheet" href="css/hover-min.css">
@@ -65,6 +66,20 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
         </ul>
         <!-- End css3menu.com BODY section -->
     </nav> <!-- Menu-->
+
+    <!--------- BUSCADOR -------->
+    <div style="margin: 0px auto 0 auto; width: 920px; padding-left: 20px;">
+        <form class="form1" action="buscador.php" method="post">
+            <fieldset class="fieldset1">
+                <input class="input1" type="search" name="buscar" placeholder="Buscar...">
+                <button class="button1" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </fieldset>
+        </form>
+    </div>
+    <!--------- BUSCADOR -------->
+
     <div class="slider wow bounceInUp" data-wow-duration="1.5s">
 
         <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
