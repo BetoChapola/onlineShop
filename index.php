@@ -101,7 +101,16 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
     </div> <!-- Slider-->
 </header>
 
+
     <div class="main">
+
+        <!--------- ALERT VALIDADO ------>
+        <?php if(isset($_GET['alert']) && $_GET['alert'] == 'validado'){?>
+            <div class="alert alert-success" role="alert" id="exito">
+                <p class="centrar"><strong>¡Bienvenido!</strong> Tu registro se ha realizado satisfactoriamente, Ya puedes iniciar sesión.</p>
+            </div>
+        <?php }?>
+        <!--------- ALERT VALIDADO -------->
         <?php while($fila1 = mysqli_fetch_array($registros1)) {
             $registros2 = mysqli_query($link,"select nombre from imagenes where id_producto = '$fila1[id_producto]' and prioridad = 1");
             $fila2 = mysqli_fetch_array($registros2)

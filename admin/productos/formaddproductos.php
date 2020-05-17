@@ -61,10 +61,10 @@ if (isset($_SESSION['administrador'])){
                 var formData = new FormData($("#formAniadirProd")[0]); //Video 47, se agregan imagenes con Ajax, el codigo cambia un poco desde aqui
                 //Para enviar archivos por Ajax se necesita esta variable "formData", se enviara por Ajax un array que incluyan todos los archivos
                 //y el contenido de todos los campos del form. Las siguientes variables dejan de funcionar:
-                var nombrefr = document.formproductos.nombreproducto.value;
-                var preciofr = document.formproductos.precioproducto.value;
-                var descripcionfr = document.formproductos.descripcion.value;
-                var idcategoriafr = document.formproductos.selectcategoria.value;
+                //var nombrefr = document.formproductos.nombreproducto.value;
+                //var preciofr = document.formproductos.precioproducto.value;
+                //var descripcionfr = document.formproductos.descripcion.value;
+                //var idcategoriafr = document.formproductos.selectcategoria.value;
 
                 $.ajax({
                     type: "POST",
