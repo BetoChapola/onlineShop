@@ -41,6 +41,40 @@ if(!isset($_POST['buscar'])){
 
     <body>
 
+    <!----- MODAL LOGIN ----->
+    <div class="modal fade fuente" id="modal_inicio_sesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form name="form_inicio_sesion" method="post">
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email</label>
+                            <input onkeypress="emailValidado()" type="text" class="form-control" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Password:</label>
+                            <input onkeypress="passwordValidado()" type="text" class="form-control" name="password">
+                        </div>
+                    </form>
+                </div>
+                <div><span id="resultado"></span></div>
+                <br><br>
+                <div class="modal-footer">
+                    <button onclick="validar_sesion()" type="button" class="btn btn-primary">Ingresar</button>
+                </div>
+                <div class="alert alert-danger ocultar" role="alert" id="alertIncompleto">
+                    <p class="centrar"><strong>¡Ups!</strong> Debes ingresar tu email y tu password.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----- MODAL LOGIN ----->
+
+
     <header> <!-- Header-->
         <div class="cabecera"></div>
         <nav class="wow bounceInDown" data-wow-duration="1.5s">
@@ -61,8 +95,8 @@ if(!isset($_POST['buscar'])){
                 <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="menucss/menucss/contact.png" alt=""/>Contacto</a></li>
                 <li class="toproot"><a href="#" style="width:223px;height:56px;line-height:56px;"><span><img src="menucss/menucss/register.png" alt=""/>Privado</span></a>
                     <ul>
-                        <li class="topmenu"><a href="#">Acces</a></li>
-                        <li class="topmenu"><a href="#">Register Now</a></li>
+                        <li class="topmenu" onclick="ver_modal_inicio()"><a href="#">Entrar</a></li>
+                        <li class="topmenu"><a href="clientes/formregistro.php">Registrate</a></li>
                     </ul></li>
             </ul>
             <!-- End css3menu.com BODY section -->
@@ -124,6 +158,10 @@ if(!isset($_POST['buscar'])){
 
     <!-- Footer-->
     <footer class="wow bounceInDown" data-wow-duration="1.5s"><p>Todos los derechos reservados onlineshop.com</p></footer>
+
+    <script type="text/javascript" src="clientes/inicio_sesion/inicio_sesion.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- JQuery UI -->
+
     </body>
     </html>
 <?php

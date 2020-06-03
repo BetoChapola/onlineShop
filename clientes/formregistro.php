@@ -1,4 +1,6 @@
 <?php
+session_start();
+if (isset($_SESSION['id_cliente'])){header('location:zona_clientes/index.php');}
 include ("../php/conexion.php");
 $registros0 = mysqli_query($link,"SELECT * FROM categorias order by categoria ASC");
 $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from productos");
