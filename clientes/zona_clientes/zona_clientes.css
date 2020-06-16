@@ -1,0 +1,117 @@
+.cabecera {background-color: darkslategrey;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+nav {/*background-color: aliceblue;*/
+    height: 80px;
+    margin: 0 auto;
+    margin-top: -150px;
+    text-align: center;
+}
+
+.main {
+    width: 95%;
+    max-width: 840px;
+    min-height: 600px;
+    margin: 50px auto 20px auto;
+}
+
+.main .limpiar {clear: both}
+
+footer {width: 100%;
+    height: 110px;
+    background-color: #2C2C2C;
+    margin-top: 80px;
+}
+
+footer p{color: gold;
+    text-align: center;
+    box-sizing: border-box; /*esta propiedad es para no desbordar el footer con el padding*/
+    padding: 35px;
+}
+
+
+.centrar {text-align: center;
+    margin-bottom: 2px}
+
+.ocultar{
+    display: none;
+}
+
+/*buscador*/
+.form1{
+    width: 300px;
+}
+.fieldset1{
+    background-color: #fff;
+    padding: 0px 0 0 40px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.input1, .button1{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 30px;
+    padding: 0px;
+}
+.input1{
+    border: none;
+    color: #666;
+    z-index: 2;
+}
+.button1{
+    width: 50px;
+    border: 1px solid #666;
+    background-color: #333;
+    transform: translate(-50px,0);
+    transition-duration: .3s;
+}
+.fa1{
+    transform: translate(-200px,0px);
+    transition: all .1s ease-in-out;
+    color: #999;
+}
+.input1:focus{
+    outline: none;
+}
+.input1:focus + .button1{
+    transform: translate(0,0);
+    transition-duration: .3s;
+    font-size: 17px;
+}
+.input1:focus + .button1 .fa{
+    transform: translate(0,0);
+    transition-duration: .7s;
+    color: #fff;
+}
+
+/*fuente*/
+.fuente{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Botones zona cliente*/
+
+.botonZC{
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    float: left
+}
+.textZC{
+    color: white;
+    font-size: 80px;
+    margin-top: -20px
+}
+.divZC{
+    max-width: 510px;
+    margin: 70px auto 0px auto
+}

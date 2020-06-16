@@ -1,4 +1,6 @@
-.cabecera {background-color: darkslategrey; height: 180px;
+.cabecera {background-color: darkslategrey;
+           height: 180px;
+           margin-bottom: 15px;
             }
 
 nav {/*background-color: aliceblue;*/
@@ -8,8 +10,8 @@ nav {/*background-color: aliceblue;*/
     text-align: center;
 }
 
-.slider {background-color: gold;
-        margin-top: 20px;
+.slider {/*background-color: gold;*/
+        margin-top: 40px;
 }
 
 .main {/*background-color: #5CB430;*/
@@ -50,7 +52,7 @@ footer p{color: gold;
 
 
 .showcategorias {margin: 50px auto 0 auto;
-                max-width: 700px;
+                max-width: 900px;
                 width: 100%}
 
 @media screen and (max-width: 900px){
@@ -118,3 +120,6 @@ footer p{color: gold;
     transition-duration: .7s;
     color: #fff;
 }
+
+/*index.php ZONA CLIENTES*/
+.tcat{text-align: center; font-size: 50px; font-family: "Ubuntu"}

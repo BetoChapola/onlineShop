@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("php/conexion.php");
 
 $registros0 = mysqli_query($link,"SELECT * FROM categorias order by categoria ASC ");
@@ -118,6 +119,32 @@ $fila5 = mysqli_fetch_array($registros5);
         </ul>
         <!-- MENU -->
     </nav>
+
+    <div style="margin: 0px auto 0 auto; max-width: 920px; padding-left: 20px;">
+        <div style="float: right">
+            <form class="form1" action="buscador.php" method="post">
+                <fieldset class="fieldset1">
+                    <input class="input1" type="search" name="buscar" placeholder="Buscar...">
+                    <button class="button1" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+        <?php if (isset($_SESSION['nombre_cliente']) || isset($_COOKIE['nombre_cliente'])){ ?>
+            <div>
+                <p class="fuente">
+                    <a href="#" style="text-decoration: none">
+                    <span style="color: #e0a800">Bienvenido &nbsp;
+                        <?php if (isset($_SESSION['nombre_cliente'])){echo "Hola por sesion ".$_SESSION['nombre_cliente'];}
+                        if (!isset($_SESSION['nombre_cliente']) && isset($_COOKIE['nombre_cliente'])){
+                            echo "Hola por cookie ".$_COOKIE['nombre_cliente'];
+                        }?>
+                    </span>
+                </p></a>
+            </div>
+        <?php } ?>
+    </div>
 </header>
 
 <div class="main">

@@ -17,6 +17,7 @@ if (isset($_POST['email']) && isset($_POST['password'])){
             if (!isset($_COOKIE['nombre_cliente'])){//Si no existe la cookie, entonces:
                 setcookie("nombre_cliente",$fila['nombre'],time()+300,"/");
                 setcookie("password_cliente",$fila['password'],time()+300,"/");
+                setcookie("email_cliente",$fila['email'],time()+300,"/");
             }
         }
 
