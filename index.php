@@ -14,11 +14,26 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online Shop</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="iconos/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/normalizar.css">
     <link rel="stylesheet" href="css/hover-min.css">
     <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- Estilo para ver el borde del efecto "transfer" -->
+    <style>
+        .ui-effects-transfer{
+            border: 3px darkcyan solid;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-image: url("admin/productos/imagenes/<?php if(mysqli_num_rows($registros3) > 0) echo $fila3['nombre']; else echo "sinimagen.jpg"?>");
+            opacity: 0.7;
+        }
+    </style>
+    <!-- Estilo para ver el borde del efecto "transfer" -->
 
     <script src="css/wow.min.js"></script>
     <script>new WOW().init()</script>
@@ -88,6 +103,16 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
     </div>
 </div>
 <!----- MODAL LOGIN ----->
+
+<!------- CARRITO ------->
+<div id="carrito" class="carrito">
+    <div class="icono-shop" align="center">
+        <i style="color: gold; font-size: 45px; margin-top: 30px; margin-left: 203px" class="fa fa-shopping-cart"></i>
+    </div>
+    <div id="mostrar_compra" class="content-shop fuente">
+    </div>
+</div>
+<!------- CARRITO ------->
 
 
 <header> <!-- Header-->
@@ -196,9 +221,9 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
 
 <!-- Footer-->
 <footer class="wow bounceInDown" data-wow-duration="1.5s"><p>Todos los derechos reservados onlineshop.com</p></footer>
-
+<!-- Footer-->
 <script type="text/javascript" src="clientes/inicio_sesion/inicio_sesion.js"></script>
+<script type="text/javascript" src="compra/compra.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- JQuery UI -->
 </body>
-
 </html>

@@ -123,3 +123,43 @@ footer p{color: gold;
 
 /*index.php ZONA CLIENTES*/
 .tcat{text-align: center; font-size: 50px; font-family: "Ubuntu"}
+
+/*Carrito*/
+.carrito{
+    left: 100%;
+    top: 200px;
+    position: fixed;
+    width: 400px;
+    background-color: white;
+    border: 1px #0099FF solid;
+    border-radius: 4px 0px 0px 4px;
+    z-index: 99; /* Para poner el elemento en la parte superior de la coordenada Z */
+
+    transition: margin-left 1s;
+    -webkit-transition: margin-left 1s;
+    -moz-transition: margin-left 1s;
+    -ms-transition: margin-left 1s;
+    -o-transition: margin-left 1s;
+}
+
+.carrito:hover{
+    margin-left: -400px;
+
+}
+
+.icono-shop{
+    width: 50px;
+    height: 120px;
+    background-color: #383d41;
+    border-radius: 10px 0px 0px 10px;
+    margin-left: -50px;
+    cursor: pointer;
+    float: left;
+}
+
+.content-shop{
+    height: 200px;
+    padding: 5px;
+    overflow: auto;
+}
+/*Carrito*/

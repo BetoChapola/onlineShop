@@ -27,6 +27,21 @@ $fila5 = mysqli_fetch_array($registros5);
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/normalizar.css">
     <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="iconos/css/font-awesome.min.css">
+    <!-- Estilo para ver el borde del efecto "transfer" -->
+    <style>
+        .ui-effects-transfer{
+            border: 3px darkcyan solid;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-image: url("admin/productos/imagenes/<?php if(mysqli_num_rows($registros3) > 0) echo $fila3['nombre']; else echo "sinimagen.jpg"?>");
+            opacity: 0.7;
+        }
+    </style>
+    <!-- Estilo para ver el borde del efecto "transfer" -->
+
     <!-- Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -56,6 +71,9 @@ $fila5 = mysqli_fetch_array($registros5);
             $("#btnmostrarmas").show("fast");
         }
     </script>
+    <!-- Audio cuando se presiona el boton comprar -->
+    <audio id="player" src="compra/click-comprar.mp3"></audio>
+    <!-- Audio cuando se presiona el boton comprar -->
 </head>
 <body>
 
@@ -152,7 +170,8 @@ $fila5 = mysqli_fetch_array($registros5);
     <div style="margin: 40px auto 0 auto">
         <!------ LIGHTBOX ------->
         <div style="float: left; margin-right: 30px">
-            <div><a class="vlightbox1" href="admin/productos/imagenes/<?php if(mysqli_num_rows($registros3) > 0) echo $fila3['nombre']; else echo "sinimagen.jpg"?>" title="<?php echo $fila2['nombre'];?>">
+            <div id="imgPrincipal">
+                <a class="vlightbox1" href="admin/productos/imagenes/<?php if(mysqli_num_rows($registros3) > 0) echo $fila3['nombre']; else echo "sinimagen.jpg"?>" title="<?php echo $fila2['nombre'];?>">
                     <img width="330px" height="247" src="admin/productos/imagenes/<?php if(mysqli_num_rows($registros3) > 0) echo $fila3['nombre']; else echo "sinimagen.jpg"?>">
                 </a>
             </div>
@@ -163,10 +182,16 @@ $fila5 = mysqli_fetch_array($registros5);
         </div>
         <!------ LIGHTBOX ------->
         <!------ PRECIO Y CARACTERISTICAS ------->
-        <p class="fuente" style="font-size: 25px"><?php echo $fila2['nombre'];?></p>
-        <span class="fuente" style="font-size: 20px"><span style="color: goldenrod">$<?php echo $fila2['precio'];?>.00 m.n.</span> &nbsp;X&nbsp;&nbsp;
-    <input style="width: 45px; color: dodgerblue" type="number" min="1" max="10" value="1">
-    <button type="button" class="btn btn-success">Comprar</button></span>
+        <p class="fuente" style="font-size: 30px"><?php echo $fila2['nombre'];?></p>
+        <form name="formCompra">
+            <span class="fuente" style="font-size: 25px">
+                <span style="color: goldenrod">$<?php echo $fila2['precio'];?>.00 m.n.</span> &nbsp;X&nbsp;&nbsp;
+                <input style="width: 45px; color: dodgerblue" type="number" min="1" max="10" value="1" name="cantidad_producto">
+                <input type="hidden" name="nombre_producto" value="<?php echo $fila2['nombre']; ?>">
+                <input type="hidden" name="precio_producto" value="<?php echo $fila2['precio']; ?>">
+                <button type="button" onclick="volar()" class="btn btn-success">Comprar</button>
+            </span>
+        </form>
         <p class="fuente" style="font-size: 20px; margin-top: 25px">&nbsp;&nbsp;Características:&nbsp;&nbsp;</p>
         <div class="fuente">
             <div>
@@ -196,8 +221,18 @@ $fila5 = mysqli_fetch_array($registros5);
 
 <!-- Footer-->
 <footer class="wow bounceInDown" data-wow-duration="1.5s"><p>Todos los derechos reservados onlineshop.com</p></footer>
-
+<!-- Footer-->
+<!------- CARRITO ------->
+<div id="carrito" class="carrito">
+    <div class="icono-shop" align="center">
+        <i style="color: gold; font-size: 45px; margin-top: 30px; margin-left: 203px" class="fa fa-shopping-cart"></i>
+    </div>
+    <div id="mostrar_compra" class="content-shop fuente">
+    </div>
+</div>
+<!------- CARRITO ------->
 <script type="text/javascript" src="clientes/inicio_sesion/inicio_sesion.js"></script>
+<script type="text/javascript" src="compra/compra.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- JQuery UI -->
 </body>
 </html>
