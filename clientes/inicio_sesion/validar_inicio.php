@@ -15,9 +15,10 @@ if (isset($_POST['email']) && isset($_POST['password'])){
 
         if ($_POST['crear_cookie'] == "true"){
             if (!isset($_COOKIE['nombre_cliente'])){//Si no existe la cookie, entonces:
-                setcookie("nombre_cliente",$fila['nombre'],time()+300,"/");
-                setcookie("password_cliente",$fila['password'],time()+300,"/");
-                setcookie("email_cliente",$fila['email'],time()+300,"/");
+                setcookie("nombre_cliente",$fila['nombre'],time()+7200,"/"); //7200 seg son 2 horas
+                setcookie("password_cliente",$fila['password'],time()+7200,"/");
+                setcookie("email_cliente",$fila['email'],time()+7200,"/");
+                setcookie("id_cliente",$fila['id_cliente'],time()+7200,"/");
             }
         }
 

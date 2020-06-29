@@ -38,7 +38,7 @@ function validar_sesion() {
                 if (resp === "exito"){
                     $("#alertIncompleto").hide("fast");
                     $("#resultado").html("encontramos el usuario");
-                    location.href="clientes/zona_clientes/index.php"
+                    location.href="clientes/zona_clientes/"
                 }
 
                 if (resp === "fracaso"){

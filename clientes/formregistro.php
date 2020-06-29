@@ -49,7 +49,7 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
         <input type="checkbox" id="css3menu-switcher" class="c3m-switch-input">
         <ul id="css3menu1" class="topmenu">
             <li class="switch"><label onclick="" for="css3menu-switcher"></label></li>
-            <li class="topmenu"><a class="pressed" href="#" style="width:224px;height:56px;line-height:56px;"><img src="../menucss/menucss/home.png" alt=""/>Home</a></li>
+            <li class="topmenu"><a class="pressed" href="../index.php" style="width:224px;height:56px;line-height:56px;"><img src="../menucss/menucss/home.png" alt=""/>Home</a></li>
             <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="../menucss/menucss/buy.png" alt=""/>Producto</a>
 
                 <ul>

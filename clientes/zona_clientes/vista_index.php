@@ -41,7 +41,7 @@
         <input type="checkbox" id="css3menu-switcher" class="c3m-switch-input">
         <ul id="css3menu1" class="topmenu">
             <li class="switch"><label onclick="" for="css3menu-switcher"></label></li>
-            <li class="topmenu"><a class="pressed" href="#" style="width:224px;height:56px;line-height:56px;"><img src="../../menucss/menucss/home.png" alt=""/>Home</a></li>
+            <li class="topmenu"><a class="pressed" href="../../index.php" style="width:224px;height:56px;line-height:56px;"><img src="../../menucss/menucss/home.png" alt=""/>Home</a></li>
             <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="../../menucss/menucss/buy.png" alt=""/>Producto</a>
 
                 <ul>
@@ -54,12 +54,6 @@
 
             </li>
             <li class="topmenu"><a href="#" style="width:224px;height:56px;line-height:56px;"><img src="../../menucss/menucss/contact.png" alt=""/>Contacto</a></li>
-            <li class="toproot"><a href="#" style="width:223px;height:56px;line-height:56px;"><span><img src="../../menucss/menucss/register.png" alt=""/>Privado</span></a>
-                <ul>
-                    <li class="topmenu"><a href="#">Acces</a></li>
-                    <li class="topmenu"><a href="../formregistro.php">Register Now</a></li>
-                </ul>
-            </li>
         </ul>
     </nav> <!-- Menu-->
 

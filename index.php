@@ -114,6 +114,14 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
 </div>
 <!------- CARRITO ------->
 
+<!-- COMPRA REALIZADA --->
+<?php if (isset($_GET['compra_realizada'])){ ?>
+    <div class="alert alert-success" role="alert" style="margin-bottom: 0px">
+        <p class="centrar"><strong>Bien!</strong> Tu compra se realizó, ve a la zona privada para más detalles.</p>
+    </div>
+<?php } ?>
+<!-- COMPRA REALIZADA --->
+
 
 <header> <!-- Header-->
     <div class="cabecera"></div>
@@ -157,7 +165,7 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
         <?php if (isset($_SESSION['nombre_cliente']) || isset($_COOKIE['nombre_cliente'])){ ?>
         <div>
             <p class="fuente">
-                <a href="clientes/zona_clientes" style="text-decoration: none">
+                <a href="clientes/zona_clientes/vista_index.php" style="text-decoration: none">
                     <span style="color: #e0a800">Bienvenido &nbsp;
                         <?php if (isset($_SESSION['nombre_cliente'])){echo "Hola por sesion ".$_SESSION['nombre_cliente'];}
                         if (!isset($_SESSION['nombre_cliente']) && isset($_COOKIE['nombre_cliente'])){

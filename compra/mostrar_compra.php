@@ -42,8 +42,7 @@ if (isset($_POST['nombre_producto'])){
 
 }
 
-if (isset($_SESSION['mi_carrito']) && !empty($_SESSION['mi_carrito'])){
-?>
+if (isset($_SESSION['mi_carrito']) && !empty($_SESSION['mi_carrito'])){ ?>
     <!-- Contenido del carrito (TABLA) -->
     <table class="table table-hover">
         <tr align="center">
@@ -53,17 +52,28 @@ if (isset($_SESSION['mi_carrito']) && !empty($_SESSION['mi_carrito'])){
             <th>Eliminar</th>
         </tr>
         <tbody align="center">
-        <?php
-        for ($i=0;$i<count($_SESSION['mi_carrito']);$i++){ ?>
+        <?php for ($i=0;$i<count($_SESSION['mi_carrito']);$i++){ ?>
             <tr id="<?php echo $i ?>">
                 <td><?php echo $_SESSION['mi_carrito'][$i]['nombre']?></td>
-                <td ><?php echo $_SESSION['mi_carrito'][$i]['precio']?></td>
+                <td><?php echo $_SESSION['mi_carrito'][$i]['precio']?></td>
                 <td><?php echo $_SESSION['mi_carrito'][$i]['cantidad']?></td>
                 <td><a style="cursor: pointer" onclick="eliminar_producto(<?php echo $i ?>)"><img src="compra/delete1.png" alt=""></a></td>
             </tr>
-            <?php
-        }
-        ?>
+            <?php } ?>
+        <?php if (isset($_SESSION['envio'])){ ?>
+            <tr>
+                <td>Envío</td>
+                <td>3</td>
+                <td>1</td>
+                <td></td>
+            </tr>
+        <?php } ?>
+        <?php if (isset($_SESSION['pago'])){ ?>
+            <tr class="alert-warning">
+                <td>Tipo de pago:</td>
+                <td><?php echo $_SESSION['pago'] ?></td>
+            </tr>
+        <?php } ?>
         <tr class="alert-success"><td><span><strong>Total neto:</strong></span></td>
             <td><?php echo $_SESSION['total'] ?></td>
         </tr>
@@ -75,6 +85,12 @@ if (isset($_SESSION['mi_carrito']) && !empty($_SESSION['mi_carrito'])){
         </tbody>
     </table>
     <!-- Contenido del carrito (TABLA) -->
+
+    <div style="margin-bottom: 10px">
+        <a href="compra/proceso_compra/proceso_compra.php">
+            <button type="button" class=" btn btn-success">Finalizar</button>
+        </a>
+    </div>
 
 <?php
 
