@@ -2,23 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5843e6e6-c6e1-41a6-a03b-e6f3e7cab019" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compra/proceso_compra/crear_pedido.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compra/proceso_compra/forma_pago.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compra/proceso_compra/mostrar_compra.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compra/proceso_compra/proceso_compra.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compra/proceso_compra/proceso_compra.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compra/proceso_compra/restar_envio.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compra/proceso_compra/sumar_envio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/d71a1466-84d2-4190-a6db-760396042d61.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d71a1466-84d2-4190-a6db-760396042d61.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imagenes/downloadPDF.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clientes/zona_clientes/ver_pedidos.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/courier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/courierb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/courierbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/courieri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/helvetica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/helveticab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/helveticabi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/helveticai.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/symbol.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/times.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/timesb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/timesbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/timesi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/font/zapfdingbats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/fpdf.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Alberto.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alberto.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientes/formregistro.php" afterPath="$PROJECT_DIR$/clientes/formregistro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientes/inicio_sesion/inicio_sesion.js" afterPath="$PROJECT_DIR$/clientes/inicio_sesion/inicio_sesion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientes/inicio_sesion/validar_inicio.php" afterPath="$PROJECT_DIR$/clientes/inicio_sesion/validar_inicio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientes/zona_clientes/index.php" afterPath="$PROJECT_DIR$/clientes/zona_clientes/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientes/zona_clientes/vista_index.php" afterPath="$PROJECT_DIR$/clientes/zona_clientes/vista_index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compra/mostrar_compra.php" afterPath="$PROJECT_DIR$/compra/mostrar_compra.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.js" afterPath="$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,7 +84,58 @@
     <favorites_list name="onlineShop" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="ver_pedidos.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/ver_pedidos.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="536">
+                  <caret line="71" column="59" lean-forward="true" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+                  <folding>
+                    <element signature="e#3708#3727#0#HTML" expanded="true" />
+                    <marker date="1593648876298" expanded="true" signature="481:658" ph="select pedid... pedidos" />
+                    <marker date="1593648876298" expanded="true" signature="700:743" ph="..." />
+                    <marker date="1593648876298" expanded="true" signature="946:1031" ph="select pedid... pedidos" />
+                    <marker date="1593648876298" expanded="true" signature="946:1045" ph="select pedid... pedidos" />
+                    <marker date="1593648876298" expanded="true" signature="1091:1188" ph="select fecha... pedidos2" />
+                    <marker date="1593648876298" expanded="true" signature="1091:1202" ph="select * fro... pedidos2" />
+                    <marker date="1593648876298" expanded="true" signature="1298:1396" ph="select * fro... pedidos2" />
+                    <marker date="1593648876298" expanded="true" signature="1298:1406" ph="select total... pedidos2" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="vista_index.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/vista_index.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-336">
+                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                  <folding>
+                    <marker date="1593564737333" expanded="true" signature="2307:2354" ph="SELECT * FRO... categorias" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="zona_clientes.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="14">
+                  <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -117,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin/productos/formaddproductos.php" />
-        <option value="$PROJECT_DIR$/admin/productos/prueba.php" />
         <option value="$PROJECT_DIR$/clientes/prueba.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa0.175/email.php" />
         <option value="$PROJECT_DIR$/pruebas/email.php" />
@@ -141,7 +194,6 @@
         <option value="$PROJECT_DIR$/mostrarproductos.php" />
         <option value="$PROJECT_DIR$/buscador.php" />
         <option value="$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.css" />
-        <option value="$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.js" />
         <option value="$PROJECT_DIR$/clientes/zona_clientes/ver_modificar_datos.php" />
         <option value="$PROJECT_DIR$/clientes/zona_clientes/actualizar_datos.php" />
         <option value="$PROJECT_DIR$/clientes/zona_clientes/destruir_cookie_sesion.php" />
@@ -157,7 +209,6 @@
         <option value="$PROJECT_DIR$/clientes/formregistro.php" />
         <option value="$PROJECT_DIR$/clientes/zona_clientes/index.php" />
         <option value="$PROJECT_DIR$/clientes/inicio_sesion/inicio_sesion.js" />
-        <option value="$PROJECT_DIR$/clientes/zona_clientes/vista_index.php" />
         <option value="$PROJECT_DIR$/compra/proceso_compra/sumar_envio.php" />
         <option value="$PROJECT_DIR$/compra/proceso_compra/restar_envio.php" />
         <option value="$PROJECT_DIR$/compra/proceso_compra/forma_pago.php" />
@@ -168,6 +219,10 @@
         <option value="$PROJECT_DIR$/clientes/inicio_sesion/validar_inicio.php" />
         <option value="$PROJECT_DIR$/compra/proceso_compra/crear_pedido.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d71a1466-84d2-4190-a6db-760396042d61/console.sql" />
+        <option value="$PROJECT_DIR$/clientes/zona_clientes/vista_index.php" />
+        <option value="$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.js" />
+        <option value="$PROJECT_DIR$/clientes/zona_clientes/ver_pedidos.php" />
       </list>
     </option>
   </component>
@@ -196,9 +251,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1477" />
-    <option name="y" value="214" />
-    <option name="width" value="1382" />
+    <option name="x" value="1596" />
+    <option name="y" value="218" />
+    <option name="width" value="1380" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -233,6 +288,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+            <path>
+              <item name="" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+              <item name="com.intellij.database" type="61db50fb:ScratchProjectViewPane$MyPsiNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,6 +322,16 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="onlineShop" type="cbb8eebc:String" user="onlineShop" />
             </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="onlineShop" type="cbb8eebc:String" user="onlineShop" />
+              <item name="clientes" type="cbb8eebc:String" user="clientes" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="onlineShop" type="cbb8eebc:String" user="onlineShop" />
+              <item name="imagenes" type="cbb8eebc:String" user="imagenes" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -259,22 +340,6 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="onlineShop" type="cbb8eebc:String" user="onlineShop" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
-            <path>
-              <item name="" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-              <item name="com.intellij.database" type="61db50fb:ScratchProjectViewPane$MyPsiNode" />
             </path>
           </expand>
           <select />
@@ -297,6 +362,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\onlineShop\imagenes" />
+      <recent name="C:\xampp\htdocs\onlineShop\pdf" />
       <recent name="C:\xampp\htdocs\onlineShop\compra" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -524,7 +591,11 @@
       <workItem from="1593216594418" duration="13675000" />
       <workItem from="1593295557944" duration="10007000" />
       <workItem from="1593369843387" duration="1034000" />
-      <workItem from="1593387122947" duration="9236000" />
+      <workItem from="1593387122947" duration="10814000" />
+      <workItem from="1593466385536" duration="6272000" />
+      <workItem from="1593476442612" duration="16164000" />
+      <workItem from="1593557976797" duration="6790000" />
+      <workItem from="1593641344625" duration="2198000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit:&#10;&#10;Se explica el uso de exit();">
       <created>1568931891895</created>
@@ -624,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592528363405</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Doceavo commit:&#10;&#10;Videos del 119 al 123.&#10;&#10;- Creación del proceso de compra.&#10;-">
+      <created>1593403317968</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1593403317968</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -651,7 +729,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="810534000" />
+    <option name="totallyTimeSpent" value="843536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,13 +742,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12434141" sideWeight="0.47368422" order="0" side_tool="false" content_ui="combo" x="1768" y="67" width="405" height="921" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11801897" sideWeight="0.47368422" order="0" side_tool="false" content_ui="combo" x="1768" y="67" width="405" height="921" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32725322" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264865" sideWeight="0.50446427" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1564805" sideWeight="0.48064515" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.4955357" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17489271" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18282403" sideWeight="0.4806867" order="2" side_tool="false" content_ui="tabs" />
@@ -684,8 +762,9 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1462" y="99" width="1003" height="858" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3409091" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34012875" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32618025" sideWeight="0.4955357" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -758,82 +837,19 @@
     <MESSAGE value="Noveno commit:&#10;&#10;Videos del 100 al 103.&#10;&#10;- Uso de Sesiones.&#10;- Uso de cookies." />
     <MESSAGE value="Décimo commit:&#10;&#10;Videos del 104 al 110.&#10;&#10;- Se realizó toda la zona de clientes en la parte de administración." />
     <MESSAGE value="Onceavo commit:&#10;&#10;Videos del 112 al 118.&#10;&#10;- Elaboración del carrito.&#10;- Uso de arrays.&#10;- Uso del método array_splice();" />
-    <option name="LAST_COMMIT_MESSAGE" value="Onceavo commit:&#10;&#10;Videos del 112 al 118.&#10;&#10;- Elaboración del carrito.&#10;- Uso de arrays.&#10;- Uso del método array_splice();" />
+    <MESSAGE value="Doceavo commit:&#10;&#10;Videos del 119 al 123.&#10;&#10;- Creación del proceso de compra.&#10;-" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doceavo commit:&#10;&#10;Videos del 119 al 123.&#10;&#10;- Creación del proceso de compra.&#10;-" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="79" />
+      <option name="time" value="80" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/ver_modificar_datos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="91" lean-forward="false" selection-start-line="8" selection-start-column="91" selection-end-line="8" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/destruir_cookie_sesion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/productos/verproducto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/clientes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/TiendaCompleta (27-02-2018)/Tienda (27-02-18)/clientes/zona_clientes/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/TiendaCompleta (27-02-2018)/Tienda (27-02-18)/administracion/clientes/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mostrarproductos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1591310461619" expanded="true" signature="151:225" ph="select id_pr... productos" />
-            <marker date="1591310461619" expanded="true" signature="764:811" ph="SELECT * FRO... categorias" />
-            <marker date="1591310461619" expanded="true" signature="915:1084" ph="select id_pr... productos" />
-            <marker date="1591310461619" expanded="true" signature="1150:1318" ph="select id_pr... productos" />
-            <marker date="1591310461619" expanded="true" signature="1376:1440" ph="select categ... categorias" />
-            <marker date="1591310461619" expanded="true" signature="8135:8222" ph="select nombr... imagenes" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/productos/showproductos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -925,24 +941,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/vista_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="47" column="25" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/actualizar_datos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -957,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -965,7 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,9 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#755#977#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,14 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2530">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1592418054127" expanded="true" signature="88:135" ph="SELECT * FRO... categorias" />
-            <marker date="1592418054127" expanded="true" signature="174:238" ph="select categ... categorias" />
-            <marker date="1592418054127" expanded="true" signature="318:382" ph="select * fro... productos" />
-            <marker date="1592418054127" expanded="true" signature="462:546" ph="select nombr... imagenes" />
-            <marker date="1592418054127" expanded="true" signature="626:710" ph="select nombr... imagenes" />
-            <marker date="1592418054127" expanded="true" signature="790:874" ph="select nombr... imagenes" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,25 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/inicio_sesion/recuperar_password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1590554088243" expanded="true" signature="176:304" ph="select nombr... clientes" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1084,7 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,17 +1060,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientes/inicio_sesion/validar_inicio.php">
+    <entry file="file://$PROJECT_DIR$/php/conexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="56" lean-forward="false" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-          <folding>
-            <marker date="1593398326492" expanded="true" signature="288:450" ph="select id_cl... clientes" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compra/proceso_compra/proceso_compra.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="61" column="6" lean-forward="false" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="118" column="75" lean-forward="false" selection-start-line="118" selection-start-column="75" selection-end-line="118" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compra/proceso_compra/proceso_compra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/ver_modificar_datos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pruebas/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/inicio_sesion/recuperar_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d71a1466-84d2-4190-a6db-760396042d61/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1113,20 +1126,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compra/mostrar_compra.php">
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="81" column="38" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="38" />
-          <folding>
-            <element signature="e#87#256#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="-210">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/31efc6e1/d71a1466-84d2-4190-a6db-760396042d61/shoponline.pedidos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/admin/productos/formaddproductos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1960">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compra/mostrar_compra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-700">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/productos/addproductos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compra/proceso_compra/crear_pedido.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1137,58 +1168,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/conexion.php">
+    <entry file="file://$PROJECT_DIR$/pdf/fpdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-3080">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compra/proceso_compra/crear_pedido.php">
+    <entry file="file://$PROJECT_DIR$/pdf/font/times.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="60" column="49" lean-forward="false" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="49" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/31efc6e1/d71a1466-84d2-4190-a6db-760396042d61/shoponline.pedidos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes/inicio_sesion/validar_inicio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
-            <marker date="1593401916373" expanded="true" signature="312:426" ph="select pedid... pedidos" />
-            <marker date="1593401916373" expanded="true" signature="394:425" ph="SELECT max(p... pedidos" />
-            <marker date="1593401916373" expanded="true" signature="1126:1133" ph="insert values... " />
-            <marker date="1593401916373" expanded="true" signature="1126:1146" ph="insert into pedidos... " />
-            <marker date="1593401916373" expanded="true" signature="1126:1300" ph="insert into pedidos... " />
-            <marker date="1593401916373" expanded="true" signature="1503:1637" ph="insert into pedidos2... " />
+            <marker date="1593398326492" expanded="true" signature="288:450" ph="select id_cl... clientes" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compra/proceso_compra/proceso_compra.js">
+    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/zona_clientes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="61" column="6" lean-forward="false" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+        <state relative-caret-position="14">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/vista_index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="118" column="75" lean-forward="false" selection-start-line="118" selection-start-column="75" selection-end-line="118" selection-end-column="75" />
+        <state relative-caret-position="-336">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1593402417158" expanded="true" signature="87:130" ph="SELECT * FRO... categorias" />
-            <marker date="1593402417158" expanded="true" signature="87:134" ph="SELECT * FRO... categorias" />
-            <marker date="1593402417158" expanded="true" signature="172:227" ph="select * fro... productos" />
-            <marker date="1593402417158" expanded="true" signature="172:255" ph="select id_pr... productos" />
-            <marker date="1593402417158" expanded="true" signature="10303:10390" ph="select nombr... imagenes" />
+            <marker date="1593564737333" expanded="true" signature="2307:2354" ph="SELECT * FRO... categorias" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compra/proceso_compra/proceso_compra.php">
+    <entry file="file://$PROJECT_DIR$/clientes/zona_clientes/ver_pedidos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="536">
+          <caret line="71" column="59" lean-forward="true" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
           <folding>
-            <marker date="1593395976228" expanded="true" signature="249:296" ph="SELECT * FRO... categorias" />
+            <element signature="e#3708#3727#0#HTML" expanded="true" />
+            <marker date="1593648876298" expanded="true" signature="481:658" ph="select pedid... pedidos" />
+            <marker date="1593648876298" expanded="true" signature="700:743" ph="..." />
+            <marker date="1593648876298" expanded="true" signature="946:1031" ph="select pedid... pedidos" />
+            <marker date="1593648876298" expanded="true" signature="946:1045" ph="select pedid... pedidos" />
+            <marker date="1593648876298" expanded="true" signature="1091:1188" ph="select fecha... pedidos2" />
+            <marker date="1593648876298" expanded="true" signature="1091:1202" ph="select * fro... pedidos2" />
+            <marker date="1593648876298" expanded="true" signature="1298:1396" ph="select * fro... pedidos2" />
+            <marker date="1593648876298" expanded="true" signature="1298:1406" ph="select total... pedidos2" />
           </folding>
         </state>
       </provider>

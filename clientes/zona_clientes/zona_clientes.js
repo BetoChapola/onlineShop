@@ -10,8 +10,31 @@ function ver_modificar_datos() {
 
         success:function (resp) {
             $("#cargaImagen").hide("fast");
+            $("#div_ver_pedidos").hide("fast");
             $("#div_respuesta").html(resp);
             $("#div_respuesta").show("fast");
+        }
+    })
+}
+
+function ver_pedidos() {
+    $("#botones").animate({margin:"-20px auto 0px auto"},"fast");
+
+    $.ajax({
+        url:"ver_pedidos.php",
+
+        beforeSend:function () {
+            $("#cargaImagen").show("fast");
+        },
+
+        success:function (resp) {
+            $("#cargaImagen").hide("fast");
+            $("#div_respuesta").hide("fast");
+
+            $("#div_ver_pedidos").html(resp);
+
+            $("#div_ver_pedidos").show("fast");
+            $("#accordion").accordion({heightStyle:"content"}); //JQuery Ui Accordion
         }
     })
 }
@@ -49,3 +72,4 @@ function actualizar_datos() {
         }
     })
 }
+

@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="zona_clientes.css">
     <link rel="stylesheet" href="../../css/normalizar.css">
     <link rel="stylesheet" href="../../css/hover-min.css">
-    <link rel="stylesheet" href="../../css/animate.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!-- JQuery Ui Acordeon -->
+
+
 
     <script src="../../css/wow.min.js"></script>
     <script>new WOW().init()</script>
@@ -91,7 +93,7 @@
             </div>
         </div>
 
-        <div class="fuente botonZC hvr-grow">
+        <div class="fuente botonZC hvr-grow" onclick="ver_pedidos()">
             <strong style="color: white">VER PEDIDOS</strong>
             <div class="textZC" style="margin-top: 0px">
                 <i class="fa fa-shopping-basket" aria-hidden="true"></i>
@@ -113,7 +115,7 @@
         <img src="../../imagenes/cargando.gif" alt="" style="margin: 10px auto 0 auto; text-align: center">
     </div>
     <div id="div_respuesta" style="display: none"></div>
-
+    <div id="div_ver_pedidos" style="display: none"></div>
 </div>
 
 

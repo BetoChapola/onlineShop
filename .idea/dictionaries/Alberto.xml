@@ -3,8 +3,10 @@
     <words>
       <w>abierta</w>
       <w>activa</w>
+      <w>adelante</w>
       <w>administrador</w>
       <w>agregando</w>
+      <w>ahora</w>
       <w>algo</w>
       <w>archivo</w>
       <w>arreglo</w>
@@ -19,6 +21,7 @@
       <w>cargue</w>
       <w>carrito</w>
       <w>categoría</w>
+      <w>cliente</w>
       <w>clientes</w>
       <w>compra</w>
       <w>comprar</w>
@@ -28,10 +31,13 @@
       <w>crea</w>
       <w>creada</w>
       <w>crear</w>
+      <w>creará</w>
       <w>creen</w>
       <w>cualquier</w>
       <w>cuando</w>
       <w>cuenta</w>
+      <w>cuál</w>
+      <w>código</w>
       <w>datos</w>
       <w>debe</w>
       <w>decir</w>
@@ -52,6 +58,7 @@
       <w>envío</w>
       <w>estaremos</w>
       <w>estarán</w>
+      <w>este</w>
       <w>esté</w>
       <w>existe</w>
       <w>forma</w>
@@ -60,8 +67,11 @@
       <w>función</w>
       <w>guardado</w>
       <w>incluye</w>
+      <w>iniciar</w>
+      <w>llamada</w>
       <w>mientras</w>
       <w>mismo</w>
+      <w>modificar</w>
       <w>momento</w>
       <w>mostrar</w>
       <w>mostrará</w>
@@ -79,6 +89,7 @@
       <w>porción</w>
       <w>producto</w>
       <w>puede</w>
+      <w>puras</w>
       <w>página</w>
       <w>quiere</w>
       <w>realidad</w>
@@ -86,6 +97,7 @@
       <w>recorren</w>
       <w>reemplaza</w>
       <w>refrescamos</w>
+      <w>repetir</w>
       <w>restar</w>
       <w>retorna</w>
       <w>ruta</w>
@@ -101,7 +113,9 @@
       <w>todos</w>
       <w>transferencia</w>
       <w>usar</w>
+      <w>usarán</w>
       <w>volar</w>
+      <w>zona</w>
     </words>
   </dictionary>
 </component>
