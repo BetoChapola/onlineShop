@@ -14,7 +14,6 @@ if (isset($_SESSION['administrador'])){
 
     //Seleccionar tabla imagenes
     $registros3 = mysqli_query($link,"SELECT nombre FROM imagenes WHERE id_producto = '$fila1[id_producto]'");
-    $fila3 = mysqli_fetch_row($registros3);
 
     //Lo que se muestra en el modal
 
