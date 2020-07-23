@@ -32,11 +32,8 @@ if (!isset($_SESSION['administrador'])){//Si no esta definida la session de admi
         if ($_POST['user']=="admin" && $_POST['pass']=="123"){//SI estan definidas entonces, validar que user=admin y pass=123
             $_SESSION['administrador']=$_POST['user'];//Si la validacion es correcta entonces iniciar session
             if (isset($_SESSION['administrador'])){//Si la session es administrador entonces:
-                echo "Hola ".$_SESSION['administrador']."<br>";//imprimir Hola admin
-                echo "<a href='categorias/formaddcategoria.php?'>Categorías</a><br>";
-                echo "<a href='clientes/index.php'>Clientes</a><br>";
-                echo "<a href='pedidos/ver_pedidos.php'>Pedidos</a><br>";
-                echo "<a href='productos/formaddproductos.php'>Productos</a>";
+
+                header("location: pedidos/ver_pedidos.php");
 
             }
         }else{echo "incorrecta";}//Si el user y pass son incorrectos, entonces

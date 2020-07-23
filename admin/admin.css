@@ -1,3 +1,8 @@
+.cabecera_admin {background-color: darkslategrey;
+    height: 90px;
+    margin-bottom: 15px;
+}
+
 .tadministrador{text-align: center; font-size: 50px; font-family: "Ubuntu"}
 
 .formulario{max-width:700px; width: 100%; margin: 50px auto 0 auto;}

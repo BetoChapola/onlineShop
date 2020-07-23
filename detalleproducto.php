@@ -18,8 +18,7 @@ $fila5 = mysqli_fetch_array($registros5);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
@@ -197,31 +196,35 @@ $fila5 = mysqli_fetch_array($registros5);
             <div>
                 <?php
                 $array = explode(" ",$fila2['descripcion']);
-                for ($i = 0;$i<35;$i++){
-                    echo $array[$i]." ";
-                }echo "...";
+                if (count($array)<35){
+                    for ($i = 0;$i<count($array);$i++){
+                        echo $array[$i]." ";
+                    }
+                }else{
+                    for ($i = 0;$i<35;$i++){
+                        echo $array[$i]." ";
+                    }echo "...";
                 ?>
             </div>
             <div class="ocultar" id="descripcionTxt">
                 <?php
                 for ($i = 35;$i<count($array);$i++){
                     echo $array[$i]." ";
-                }
-                ?>
+                } ?>
             </div><br>
             <button id="btnmostrarmas" onclick="mostrarText()" type="button" class="btn btn-default">Mas...</button>
             <div id="btnmostrarmenos" class="ocultar"><button  onclick="ocultarText()" type="button" class="btn btn-default">Menos...</button></div>
+            <?php } ?>
         </div>
         <!------ PRECIO Y CARACTERISTICAS ------->
     </div>
 </div>
-
 <?php cerrarconexion(); ?>
 <div class="limpiar"></div>
-
 <!-- Footer-->
 <footer class="wow bounceInDown" data-wow-duration="1.5s"><p>Todos los derechos reservados onlineshop.com</p></footer>
 <!-- Footer-->
+
 <!------- CARRITO ------->
 <div id="carrito" class="carrito">
     <div class="icono-shop" align="center">
