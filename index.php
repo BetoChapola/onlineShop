@@ -202,7 +202,6 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
 
 
     <div class="main">
-
         <!--------- ALERT VALIDADO ------>
         <?php if(isset($_GET['alert']) && $_GET['alert'] == 'validado'){?>
             <div class="alert alert-success" role="alert" id="exito">
@@ -224,12 +223,18 @@ $registros1 = mysqli_query($link,"select id_producto, precio, id_categoria from 
         }
         cerrarconexion();
         ?>
+
         <div class="limpiar"></div>
+
     </div>
 
 <!-- Footer-->
 <footer class="wow bounceInDown" data-wow-duration="1.5s"><p>Todos los derechos reservados onlineshop.com</p></footer>
 <!-- Footer-->
+
+<div style="position: fixed;left: 100%; margin-left: -180px; width: 150px; bottom: 0px;">
+    <!-- mibew button --><a id="mibew-agent-button" href="http://localhost/onlineShop/mibew/chat?locale=en" target="_blank" onclick="Mibew.Objects.ChatPopups['5f18f474a3c4d35f'].open();return false;"><img src="http://localhost/onlineShop/mibew/b?i=mibew&amp;lang=en" border="0" alt="" /></a><script type="text/javascript" src="http://localhost/onlineShop/mibew/js/compiled/chat_popup.js"></script><script type="text/javascript">Mibew.ChatPopup.init({"id":"5f18f474a3c4d35f","url":"http:\/\/localhost\/onlineShop\/mibew\/chat?locale=en","preferIFrame":false,"modSecurity":true,"forceSecure":false,"style":"","width":640,"height":480,"resizable":true,"styleLoader":"http:\/\/localhost\/onlineShop\/mibew\/chat\/style\/popup"});</script><!-- / mibew button -->
+</div>
 <script type="text/javascript" src="clientes/inicio_sesion/inicio_sesion.js"></script>
 <script type="text/javascript" src="compra/compra.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- JQuery UI -->
